@@ -24,26 +24,58 @@ namespace Voli
 
         private void btnVoli_Click(object sender, EventArgs e)
         {
-            frmVoli formVoli = new frmVoli();
+            frmAddVolo formAddVolo = new frmAddVolo();
 
-            formVoli.ShowDialog();
+            formAddVolo.ShowDialog();
         }
 
         private void btnPersonale_Click(object sender, EventArgs e)
         {
-            frmPersonale formPersonale = new frmPersonale();
+            frmAddPersonale formAddPersonale = new frmAddPersonale();
 
-            formPersonale.ShowDialog();
+            formAddPersonale.ShowDialog();
         }
 
         private void btnAeroporti_Click(object sender, EventArgs e)
         {
+            frmAddAeroporto formAddAeroporto = new frmAddAeroporto();
 
+            formAddAeroporto.ShowDialog();
         }
 
         private void btnAeromobili_Click(object sender, EventArgs e)
         {
+            frmAddAeromobile formAddAeromobile = new frmAddAeromobile();
 
+            formAddAeromobile.ShowDialog();
+        }
+
+        private void btnCheckVoli_Click(object sender, EventArgs e)
+        {
+            frmCheckVoli formCheckVoli = new frmCheckVoli();
+
+            formCheckVoli.ShowDialog();
+        }
+
+        private void btnCheckAeroporti_Click(object sender, EventArgs e)
+        {
+            frmCheckAeroporti formCheckAeroporti = new frmCheckAeroporti();
+
+            formCheckAeroporti.ShowDialog();
+        }
+
+        private void btnCheckPersonale_Click(object sender, EventArgs e)
+        {
+            frmCheckPersonale formCheckPersonale = new frmCheckPersonale();
+
+            formCheckPersonale.ShowDialog();
+        }
+
+        private void btnCheckAeromobili_Click(object sender, EventArgs e)
+        {
+            frmCheckAeromobili formCheckAeromobili = new frmCheckAeromobili();
+
+            formCheckAeromobili.ShowDialog();
         }
     }
 }
