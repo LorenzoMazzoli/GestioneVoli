@@ -8,6 +8,7 @@ namespace Voli_Library
 {
     class Aeromobile
     {
+        int numero;
         string Matricola { get; set; }
         string Modello { get; set; }
         string Marca { get; set; }
