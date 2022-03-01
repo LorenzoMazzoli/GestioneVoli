@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Voli_DLL\Voli_DLL.csproj" />
+  </ItemGroup>
+
 </Project>
