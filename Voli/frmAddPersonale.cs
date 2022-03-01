@@ -12,9 +12,25 @@ namespace Voli
 {
     public partial class frmAddPersonale : Form
     {
-        public frmAddPersonale()
+        public frmAddPersonale(bool cliccato)
         {
             InitializeComponent();
+            if (cliccato == true)
+            {
+                lblQualifica.Dispose();
+                cmbQualifica.Dispose();
+                
+            }
+            else
+            {
+                lblGrado.Dispose();
+                cmbGrado.Dispose();
+            }
+        }
+
+        private void btnChiudi_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

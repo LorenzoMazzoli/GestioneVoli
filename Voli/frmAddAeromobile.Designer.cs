@@ -29,12 +29,139 @@ namespace Voli
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMatricola = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtModello = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.btnSalva = new System.Windows.Forms.Button();
+            this.btnChiudi = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(30, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Matricola";
+            // 
+            // txtMatricola
+            // 
+            this.txtMatricola.Location = new System.Drawing.Point(151, 65);
+            this.txtMatricola.Name = "txtMatricola";
+            this.txtMatricola.Size = new System.Drawing.Size(125, 27);
+            this.txtMatricola.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(30, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Modello";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(30, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 28);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Marca";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(490, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 28);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Data d\'acquisto";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(457, 113);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // txtModello
+            // 
+            this.txtModello.Location = new System.Drawing.Point(151, 113);
+            this.txtModello.Name = "txtModello";
+            this.txtModello.Size = new System.Drawing.Size(125, 27);
+            this.txtModello.TabIndex = 6;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Location = new System.Drawing.Point(151, 158);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(125, 27);
+            this.txtMarca.TabIndex = 7;
+            // 
+            // btnSalva
+            // 
+            this.btnSalva.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSalva.Location = new System.Drawing.Point(267, 342);
+            this.btnSalva.Name = "btnSalva";
+            this.btnSalva.Size = new System.Drawing.Size(105, 44);
+            this.btnSalva.TabIndex = 8;
+            this.btnSalva.Text = "Salva";
+            this.btnSalva.UseVisualStyleBackColor = true;
+            // 
+            // btnChiudi
+            // 
+            this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnChiudi.Location = new System.Drawing.Point(401, 342);
+            this.btnChiudi.Name = "btnChiudi";
+            this.btnChiudi.Size = new System.Drawing.Size(105, 44);
+            this.btnChiudi.TabIndex = 9;
+            this.btnChiudi.Text = "Chiudi";
+            this.btnChiudi.UseVisualStyleBackColor = true;
+            // 
+            // frmAddAeromobile
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.btnChiudi);
+            this.Controls.Add(this.btnSalva);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtModello);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtMatricola);
+            this.Controls.Add(this.label1);
+            this.Name = "frmAddAeromobile";
             this.Text = "frmAddAeromobil";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMatricola;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtModello;
+        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.Button btnSalva;
+        private System.Windows.Forms.Button btnChiudi;
     }
 }

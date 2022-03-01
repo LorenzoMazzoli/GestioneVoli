@@ -27,6 +27,7 @@ namespace Voli
 
         private void btnModificaCompagnia_Click(object sender, EventArgs e)
         {
+            //this.Visible = false;
             frmComponenti formAggiungiComponenti = new frmComponenti();
 
             formAggiungiComponenti.ShowDialog();

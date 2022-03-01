@@ -32,7 +32,7 @@ namespace Voli
             this.btnAddVolo = new System.Windows.Forms.Button();
             this.btnAddAeromobile = new System.Windows.Forms.Button();
             this.btnAddAerporto = new System.Windows.Forms.Button();
-            this.btnAddPersonale = new System.Windows.Forms.Button();
+            this.btnAddPilota = new System.Windows.Forms.Button();
             this.btnChiudi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@ namespace Voli
             this.btnCheckAeroporti = new System.Windows.Forms.Button();
             this.btnCheckPersonale = new System.Windows.Forms.Button();
             this.btnCheckAeromobili = new System.Windows.Forms.Button();
+            this.btnAddPersonale = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddVolo
@@ -81,17 +82,17 @@ namespace Voli
             this.btnAddAerporto.UseVisualStyleBackColor = true;
             this.btnAddAerporto.Click += new System.EventHandler(this.btnAeroporti_Click);
             // 
-            // btnAddPersonale
+            // btnAddPilota
             // 
-            this.btnAddPersonale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddPersonale.Location = new System.Drawing.Point(331, 251);
-            this.btnAddPersonale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddPersonale.Name = "btnAddPersonale";
-            this.btnAddPersonale.Size = new System.Drawing.Size(230, 67);
-            this.btnAddPersonale.TabIndex = 3;
-            this.btnAddPersonale.Text = "Personale";
-            this.btnAddPersonale.UseVisualStyleBackColor = true;
-            this.btnAddPersonale.Click += new System.EventHandler(this.btnPersonale_Click);
+            this.btnAddPilota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddPilota.Location = new System.Drawing.Point(331, 251);
+            this.btnAddPilota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddPilota.Name = "btnAddPilota";
+            this.btnAddPilota.Size = new System.Drawing.Size(117, 67);
+            this.btnAddPilota.TabIndex = 3;
+            this.btnAddPilota.Text = "Aggiungi pilota";
+            this.btnAddPilota.UseVisualStyleBackColor = true;
+            this.btnAddPilota.Click += new System.EventHandler(this.btnAddPilota_Click);
             // 
             // btnChiudi
             // 
@@ -203,11 +204,24 @@ namespace Voli
             this.btnCheckAeromobili.UseVisualStyleBackColor = true;
             this.btnCheckAeromobili.Click += new System.EventHandler(this.btnCheckAeromobili_Click);
             // 
+            // btnAddPersonale
+            // 
+            this.btnAddPersonale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddPersonale.Location = new System.Drawing.Point(454, 251);
+            this.btnAddPersonale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddPersonale.Name = "btnAddPersonale";
+            this.btnAddPersonale.Size = new System.Drawing.Size(107, 67);
+            this.btnAddPersonale.TabIndex = 12;
+            this.btnAddPersonale.Text = "Aggiungi personale";
+            this.btnAddPersonale.UseVisualStyleBackColor = true;
+            this.btnAddPersonale.Click += new System.EventHandler(this.btnAddPersonale_Click);
+            // 
             // frmComponenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 497);
+            this.Controls.Add(this.btnAddPersonale);
             this.Controls.Add(this.btnCheckAeromobili);
             this.Controls.Add(this.btnCheckPersonale);
             this.Controls.Add(this.btnCheckAeroporti);
@@ -218,13 +232,14 @@ namespace Voli
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnChiudi);
-            this.Controls.Add(this.btnAddPersonale);
+            this.Controls.Add(this.btnAddPilota);
             this.Controls.Add(this.btnAddAerporto);
             this.Controls.Add(this.btnAddAeromobile);
             this.Controls.Add(this.btnAddVolo);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmComponenti";
             this.Text = "Aggiungi Componenti";
+            this.Load += new System.EventHandler(this.frmComponenti_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +250,7 @@ namespace Voli
         private System.Windows.Forms.Button btnAddVolo;
         private System.Windows.Forms.Button btnAddAeromobile;
         private System.Windows.Forms.Button btnAddAerporto;
-        private System.Windows.Forms.Button btnAddPersonale;
+        private System.Windows.Forms.Button btnAddPilota;
         private System.Windows.Forms.Button btnChiudi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -246,5 +261,6 @@ namespace Voli
         private System.Windows.Forms.Button btnCheckAeroporti;
         private System.Windows.Forms.Button btnCheckPersonale;
         private System.Windows.Forms.Button btnCheckAeromobili;
+        private System.Windows.Forms.Button btnAddPersonale;
     }
 }

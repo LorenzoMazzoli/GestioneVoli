@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    public class Aeroporto
+    class Aeroporto
     {
         string Nome { get; set; }
         string Codice { get; set; }
 
-        Nazione nazioneDiAppartenenza;
+        Citta cittaDiAppartenza;
 
-        public Aeroporto(string nome, string codice, Nazione nazionePassata) 
+        public Aeroporto(string nome, string codice, Citta cittaPassata) 
         {
             Nome = nome;
             Codice = codice;
-            nazioneDiAppartenenza = nazionePassata;
+            cittaDiAppartenza = cittaPassata;
         }
     }
 }

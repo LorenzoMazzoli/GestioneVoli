@@ -70,7 +70,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(914, 525);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.lblTitolo);
             this.Controls.Add(this.btnModificaCompagnia);

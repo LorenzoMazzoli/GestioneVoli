@@ -12,6 +12,7 @@ namespace Voli
 {
     public partial class frmComponenti : Form
     {
+        
         public frmComponenti()
         {
             InitializeComponent();
@@ -29,11 +30,12 @@ namespace Voli
             formAddVolo.ShowDialog();
         }
 
-        private void btnPersonale_Click(object sender, EventArgs e)
+        private void btnAddPilota_Click(object sender, EventArgs e)
         {
-            frmAddPersonale formAddPersonale = new frmAddPersonale();
 
-            formAddPersonale.ShowDialog();
+            frmAddPersonale formAddPilota = new frmAddPersonale(true);
+
+            formAddPilota.ShowDialog();
         }
 
         private void btnAeroporti_Click(object sender, EventArgs e)
@@ -76,6 +78,18 @@ namespace Voli
             frmCheckAeromobili formCheckAeromobili = new frmCheckAeromobili();
 
             formCheckAeromobili.ShowDialog();
+        }
+
+        private void btnAddPersonale_Click(object sender, EventArgs e)
+        {
+            frmAddPersonale formAddAssistente = new frmAddPersonale(false);
+
+            formAddAssistente.ShowDialog();
+        }
+
+        private void frmComponenti_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
