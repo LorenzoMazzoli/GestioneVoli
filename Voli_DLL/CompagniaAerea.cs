@@ -49,5 +49,9 @@ namespace Voli_Library
         {
             assistenti.Add(assist); //aggiunge un assistente alla lista
         }
+        public List<Aeroporto> GetAeroporti()
+        {
+            return aeroporti;
+        }
     }
 }

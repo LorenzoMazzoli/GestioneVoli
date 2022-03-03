@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Voli_Library;
 
 namespace Voli
 {
     public partial class frmCheckAeroporti : Form
     {
-        public frmCheckAeroporti()
+        List<Aeroporto> aeroporti;
+        public frmCheckAeroporti(List<Aeroporto> aeroporti)
         {
             InitializeComponent();
+            this.aeroporti = aeroporti;
+        }
+
+        private void frmCheckAeroporti_Load(object sender, EventArgs e)
+        {
+            for (int i = 0; i < aeroporti.Count ; i++)
+            {
+                lbCheckAeroporti.Items.Add(aeroporti[i].GetNome());
+            }
         }
     }
 }

@@ -23,5 +23,10 @@ namespace Voli_Library
             Codice = codice;
             cittaDiAppartenza = cittaPassata;
         }
+
+        public string GetNome()
+        {
+            return this.Nome;
+        }
     }
 }

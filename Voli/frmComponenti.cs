@@ -12,10 +12,23 @@ namespace Voli
 {
     public partial class frmComponenti : Form
     {
+        CompagniaAerea compagnia;
+        List<Citta> cities = new List<Citta>();
+        
         
         public frmComponenti()
         {
             InitializeComponent();
+        }
+        private void frmComponenti_Load(object sender, EventArgs e)
+        {
+            compagnia = new CompagniaAerea();
+            cities.Add(new Citta("Roma"));
+            cities.Add(new Citta("Milano"));
+            cities.Add(new Citta("Napoli"));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Roma", "123", cities[0]));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Milano", "456", cities[1]));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Napoli", "789", cities[2]));
         }
 
         private void btnChiudi_Click(object sender, EventArgs e)
@@ -40,9 +53,11 @@ namespace Voli
 
         private void btnAeroporti_Click(object sender, EventArgs e)
         {
-            frmAddAeroporto formAddAeroporto = new frmAddAeroporto();
+            frmAddAeroporto formAddAeroporto = new frmAddAeroporto(cities);
 
             formAddAeroporto.ShowDialog();
+
+            compagnia.AddAeroporto(new Aeroporto(formAddAeroporto.GetNome(), formAddAeroporto.GetCodice(), formAddAeroporto.GetCitta()));
         }
 
         private void btnAeromobili_Click(object sender, EventArgs e)
@@ -61,7 +76,7 @@ namespace Voli
 
         private void btnCheckAeroporti_Click(object sender, EventArgs e)
         {
-            frmCheckAeroporti formCheckAeroporti = new frmCheckAeroporti();
+            frmCheckAeroporti formCheckAeroporti = new frmCheckAeroporti(compagnia.GetAeroporti());
 
             formCheckAeroporti.ShowDialog();
         }
@@ -87,11 +102,6 @@ namespace Voli
             formAddAssistente.ShowDialog();
         }
 
-        private void frmComponenti_Load(object sender, EventArgs e)
-        {
-            CompagniaAerea compagnia = new CompagniaAerea();
 
-            compagnia.add
-        }
     }
 }

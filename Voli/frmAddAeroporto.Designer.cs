@@ -127,6 +127,7 @@ namespace Voli
             this.Controls.Add(this.label1);
             this.Name = "frmAddAeroporto";
             this.Text = "frmAddAeroporto";
+            this.Load += new System.EventHandler(this.frmAddAeroporto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

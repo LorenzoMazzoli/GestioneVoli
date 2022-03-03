@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Voli_Library;
 
 namespace Voli
 {
     public partial class Form1 : Form
     {
-        DateTime d = DateTime.Today;
-        
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +20,6 @@ namespace Voli
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(d.Hour.ToString() + ":" +  d.Minute.ToString());
-            //MessageBox.Show(d.ToString());
         }
 
         private void btnModificaCompagnia_Click(object sender, EventArgs e)
@@ -31,7 +28,6 @@ namespace Voli
             frmComponenti formAggiungiComponenti = new frmComponenti();
 
             formAggiungiComponenti.ShowDialog();
-            
         }
     }
 }

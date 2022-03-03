@@ -17,5 +17,10 @@ namespace Voli_Library
         {
             Nome = nome;
         }
+
+        public string GetNome()
+        {
+            return this.Nome;
+        }
     }
 }
