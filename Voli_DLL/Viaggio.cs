@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Viaggio
+    public class Viaggio
     {
         DateTime dataPartenza;
         string statoVolo;
@@ -15,7 +15,14 @@ namespace Voli_Library
         Pilota coPilota;
 
         List<Assistente> assistentiViaggio;
-
+        public Viaggio()
+        {
+            dataPartenza = DateTime.MinValue;
+            statoVolo = "";
+            pilotaPrincipale = null;
+            coPilota = null;
+            assistentiViaggio = new List<Assistente>();
+        }
         public Viaggio(DateTime partenza, Pilota pilotaPrin, Pilota coPil)
         {
             dataPartenza = partenza;

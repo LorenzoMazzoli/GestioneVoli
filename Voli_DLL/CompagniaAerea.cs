@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class HUB
+    public class CompagniaAerea
     {
+        string Nome { get;}
+
         List<Aeromobile> aeromobili;
         List<Aeroporto> aeroporti;
         List<Pilota> piloti;
         List<Assistente> assistenti;
-
-        public HUB()
+        public CompagniaAerea()
         {
+            aeromobili = new List<Aeromobile>();
+            aeroporti = new List<Aeroporto>();
+            piloti = new List<Pilota>();
+            assistenti = new List<Assistente>();
+        }
+        public CompagniaAerea(string nome)
+        {
+            Nome = nome;
             aeromobili = new List<Aeromobile>();
             aeroporti = new List<Aeroporto>();
             piloti = new List<Pilota>();

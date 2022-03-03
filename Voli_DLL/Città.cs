@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Citta
+     public class Citta
     {
         string Nome { get; set; }
-
+        public Citta()
+        {
+            Nome = "";
+        }
         public Citta(string nome)
         {
             Nome = nome;

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Voli_Library;
 namespace Voli
 {
     public partial class frmComponenti : Form
@@ -89,7 +89,9 @@ namespace Voli
 
         private void frmComponenti_Load(object sender, EventArgs e)
         {
-            
+            CompagniaAerea compagnia = new CompagniaAerea();
+
+            compagnia.add
         }
     }
 }

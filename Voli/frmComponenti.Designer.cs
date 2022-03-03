@@ -212,7 +212,7 @@ namespace Voli
             this.btnAddPersonale.Name = "btnAddPersonale";
             this.btnAddPersonale.Size = new System.Drawing.Size(107, 67);
             this.btnAddPersonale.TabIndex = 12;
-            this.btnAddPersonale.Text = "Aggiungi personale";
+            this.btnAddPersonale.Text = "Aggiungi assistente";
             this.btnAddPersonale.UseVisualStyleBackColor = true;
             this.btnAddPersonale.Click += new System.EventHandler(this.btnAddPersonale_Click);
             // 

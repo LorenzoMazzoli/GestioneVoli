@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Aeroporto
+    public class Aeroporto
     {
         string Nome { get; set; }
         string Codice { get; set; }
 
         Citta cittaDiAppartenza;
-
+        public Aeroporto()
+        {
+            Nome = "";
+            Codice = "";
+        }
         public Aeroporto(string nome, string codice, Citta cittaPassata) 
         {
             Nome = nome;

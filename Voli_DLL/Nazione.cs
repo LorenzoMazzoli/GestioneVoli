@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Nazione
+    public class Nazione
     {
         string Nome { get; set; }
 
         List<Citta> cities;
-
+        public Nazione()
+        {
+            Nome = "";
+            cities = new List<Citta>();
+        }
         public Nazione(string nome) 
         {
             Nome = nome;

@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Persona
+    public class Persona
     {
         string Nome { get; set; }
         string Cognome { get; set; }
         
         DateTime dataNascita;
-
+        public Persona()
+        {
+            Nome = "";
+            Cognome = "";
+            dataNascita = DateTime.MinValue;
+        }
         public Persona(string nome, string cognome, DateTime nascita)
         {
             Nome = nome;

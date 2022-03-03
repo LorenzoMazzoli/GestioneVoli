@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace Voli_Library
 {
-    class Pilota : Persona
+    public class Pilota : Persona
     {
         string Grado { get; set; }
-
+        public Pilota(string nome, string cognome, DateTime nascita) : base(nome, cognome, nascita)
+        {
+            Grado = "";
+        }
         public Pilota(string nome, string cognome, DateTime nascita, string grado) : base(nome, cognome, nascita)
         {
             Grado = grado;

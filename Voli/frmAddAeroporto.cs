@@ -16,5 +16,10 @@ namespace Voli
         {
             InitializeComponent();
         }
+
+        private void btnChiudi_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -11,7 +11,14 @@ namespace Voli_Library
 
         Aeroporto aeroportoPartenza;
         Aeroporto aeroportoArrivo;
-
+        public Volo()
+        {
+            Codice = "";
+            orarioDiArrivo = DateTime.MinValue;
+            orarioDiPartenza = DateTime.MinValue;
+            aeroportoPartenza = null;
+            aeroportoArrivo = null;
+        }
         public Volo(string codice, DateTime orarioPartenza, DateTime orarioArrivo, Aeroporto partenza, Aeroporto arrivo)
         {
             Codice = codice;

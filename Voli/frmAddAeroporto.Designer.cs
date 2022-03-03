@@ -110,6 +110,7 @@ namespace Voli
             this.btnChiudi.TabIndex = 7;
             this.btnChiudi.Text = "Chiudi";
             this.btnChiudi.UseVisualStyleBackColor = true;
+            this.btnChiudi.Click += new System.EventHandler(this.btnChiudi_Click);
             // 
             // frmAddAeroporto
             // 
