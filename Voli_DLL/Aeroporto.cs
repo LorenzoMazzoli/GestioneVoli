@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Voli_Library;
 
 namespace Voli_Library
 {
@@ -27,6 +28,21 @@ namespace Voli_Library
         public string GetNome()
         {
             return this.Nome;
+        }
+
+        public string GetCodice()
+        {
+            return this.Codice;
+        }
+
+        public Citta GetCitta()
+        {
+            return this.cittaDiAppartenza;
+        }
+
+        public string GetNomeCitta()
+        {
+            return this.cittaDiAppartenza.GetNome();
         }
     }
 }

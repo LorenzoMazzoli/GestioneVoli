@@ -24,7 +24,7 @@ namespace Voli
         {
             for (int i = 0; i < aeroporti.Count ; i++)
             {
-                lbCheckAeroporti.Items.Add(aeroporti[i].GetNome());
+                lbCheckAeroporti.Items.Add("Nome: "+aeroporti[i].GetNome()+ "   Codice: "+aeroporti[i].GetCodice()+ "    Città: " + aeroporti[i].GetNomeCitta());
             }
         }
     }

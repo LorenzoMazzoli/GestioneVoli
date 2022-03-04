@@ -94,17 +94,18 @@ namespace Voli
             // btnSalva
             // 
             this.btnSalva.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalva.Location = new System.Drawing.Point(128, 279);
+            this.btnSalva.Location = new System.Drawing.Point(86, 275);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(94, 49);
             this.btnSalva.TabIndex = 6;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
+            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
             // 
             // btnChiudi
             // 
             this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChiudi.Location = new System.Drawing.Point(284, 279);
+            this.btnChiudi.Location = new System.Drawing.Point(253, 275);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.Size = new System.Drawing.Size(94, 49);
             this.btnChiudi.TabIndex = 7;
@@ -116,7 +117,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 407);
+            this.ClientSize = new System.Drawing.Size(549, 377);
             this.Controls.Add(this.btnChiudi);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.cmbCitta);

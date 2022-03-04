@@ -25,6 +25,7 @@ namespace Voli
 
             foreach (Citta citta in ListaCitta)
             {
+                this.ListaCitta.Add(citta);
                 ListaNomiCitta.Add(citta.GetNome());
             }
             
@@ -32,8 +33,6 @@ namespace Voli
 
         private void btnChiudi_Click(object sender, EventArgs e)
         {
-            Nome = txbNome.Text;
-            Codice = txbCodice.Text;
             /*foreach (string citta in ListaNomiCitta)
             {
                 if (cmbCitta.SelectedItem.ToString()=)
@@ -62,7 +61,25 @@ namespace Voli
 
         public Citta GetCitta()
         {
-            return this.city;
+            return city;
+        }
+
+        public string GetNomeCitta()
+        {
+            return city.GetNome();
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            Nome = txbNome.Text;
+            Codice = txbCodice.Text;
+            foreach (Citta c in ListaCitta)
+            {
+                if (c.GetNome()==(string)cmbCitta.SelectedItem)
+                {
+                    city = c;
+                }
+            }
         }
     }
 }

@@ -27,5 +27,30 @@ namespace Voli_Library
             aeroportoPartenza = partenza;
             aeroportoArrivo = arrivo;
         }
+
+        public string GetCodice()
+        {
+            return this.Codice;
+        }
+
+        public DateTime GetOrarioArrivo()
+        {
+            return this.orarioDiArrivo;
+        }
+
+        public DateTime GetOrarioPartenza()
+        {
+            return this.orarioDiPartenza;
+        }
+
+        public Aeroporto GetAeroportoArrivo()
+        {
+            return this.aeroportoArrivo;
+        }
+
+        public Aeroporto GetAeroportoPartenza()
+        {
+            return this.aeroportoPartenza;
+        }
     }
 }

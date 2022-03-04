@@ -22,5 +22,10 @@ namespace Voli_Library
         {
             return this.Nome;
         }
+
+        public string SetNome
+        {
+            set { Nome = value; }
+        }
     }
 }
