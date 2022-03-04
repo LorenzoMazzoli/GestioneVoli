@@ -11,13 +11,13 @@ namespace Voli_Library
         string Matricola { get; set; }
         string Modello { get; set; }
         string Marca { get; set; }
-        DateTime annoAcquisto { get; set; }
+        DateTime DataAcquisto { get; set; }
         public Aeromobile()
         {
             Matricola = "";
             Modello = "";
             Marca = "";
-            annoAcquisto = DateTime.MinValue;
+            DataAcquisto = DateTime.MinValue;
 
         }
         public Aeromobile(string matricola, string modello, string marca, DateTime acquisto)
@@ -25,12 +25,32 @@ namespace Voli_Library
             Matricola = matricola;
             Modello = modello;
             Marca = marca;
-            annoAcquisto = acquisto;
+            DataAcquisto = acquisto;
+        }
+
+        public string GetMatricola()
+        {
+            return this.Matricola;
+        }
+
+        public string GetModello()
+        {
+            return this.Modello;
+        }
+
+        public string GetMarca()
+        {
+            return this.Marca;
+        }
+
+        public DateTime GetDataAcquisto()
+        {
+            return this.DataAcquisto;
         }
 
         public string GetInfo()
         {
-            return $"{Matricola} + ";
+            return $"Matricola: {this.Matricola} - Marca: {this.Marca} - Modello: {this.Modello} - Data d'acquisto: {this.DataAcquisto.ToString()}";
         }
     }
 }

@@ -29,8 +29,8 @@ namespace Voli
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCognome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,19 +43,19 @@ namespace Voli
             this.btnChiudi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtNome.Location = new System.Drawing.Point(148, 66);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(125, 27);
+            this.txtNome.TabIndex = 0;
             // 
-            // textBox2
+            // txtCognome
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtCognome.Location = new System.Drawing.Point(148, 119);
+            this.txtCognome.Name = "txtCognome";
+            this.txtCognome.Size = new System.Drawing.Size(125, 27);
+            this.txtCognome.TabIndex = 1;
             // 
             // label1
             // 
@@ -149,6 +149,7 @@ namespace Voli
             this.btnSalva.TabIndex = 11;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
+            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
             // 
             // btnChiudi
             // 
@@ -176,8 +177,8 @@ namespace Voli
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCognome);
+            this.Controls.Add(this.txtNome);
             this.Name = "frmAddPersonale";
             this.Text = "Aggiungi personale";
             this.ResumeLayout(false);
@@ -187,8 +188,8 @@ namespace Voli
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCognome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

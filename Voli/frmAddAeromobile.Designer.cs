@@ -34,7 +34,7 @@ namespace Voli
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataAcquisto = new System.Windows.Forms.DateTimePicker();
             this.txtModello = new System.Windows.Forms.TextBox();
             this.txtMarca = new System.Windows.Forms.TextBox();
             this.btnSalva = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@ namespace Voli
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(30, 113);
+            this.label2.Location = new System.Drawing.Point(30, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 28);
             this.label2.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace Voli
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(30, 157);
+            this.label3.Location = new System.Drawing.Point(30, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 28);
             this.label3.TabIndex = 3;
@@ -88,12 +88,12 @@ namespace Voli
             this.label4.TabIndex = 4;
             this.label4.Text = "Data d\'acquisto";
             // 
-            // dateTimePicker1
+            // dtpDataAcquisto
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(457, 113);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(250, 27);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpDataAcquisto.Location = new System.Drawing.Point(457, 113);
+            this.dtpDataAcquisto.Name = "dtpDataAcquisto";
+            this.dtpDataAcquisto.Size = new System.Drawing.Size(250, 27);
+            this.dtpDataAcquisto.TabIndex = 5;
             // 
             // txtModello
             // 
@@ -112,22 +112,24 @@ namespace Voli
             // btnSalva
             // 
             this.btnSalva.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalva.Location = new System.Drawing.Point(267, 342);
+            this.btnSalva.Location = new System.Drawing.Point(81, 292);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(105, 44);
             this.btnSalva.TabIndex = 8;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
+            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
             // 
             // btnChiudi
             // 
             this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChiudi.Location = new System.Drawing.Point(401, 342);
+            this.btnChiudi.Location = new System.Drawing.Point(237, 292);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.Size = new System.Drawing.Size(105, 44);
             this.btnChiudi.TabIndex = 9;
             this.btnChiudi.Text = "Chiudi";
             this.btnChiudi.UseVisualStyleBackColor = true;
+            this.btnChiudi.Click += new System.EventHandler(this.btnChiudi_Click);
             // 
             // frmAddAeromobile
             // 
@@ -138,7 +140,7 @@ namespace Voli
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtModello);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDataAcquisto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -158,7 +160,7 @@ namespace Voli
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDataAcquisto;
         private System.Windows.Forms.TextBox txtModello;
         private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Button btnSalva;

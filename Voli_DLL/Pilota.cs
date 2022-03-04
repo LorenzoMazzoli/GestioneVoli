@@ -17,5 +17,15 @@ namespace Voli_Library
         {
             Grado = grado;
         }
+
+        public string GetGrado()
+        {
+            return Grado;
+        }
+        
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $" - Grado: {this.Grado}";
+        }
     }
 }

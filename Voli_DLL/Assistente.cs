@@ -17,5 +17,15 @@ namespace Voli_Library
         {
             Qualifica = qualifica;
         }
+
+        public string GetQualifica()
+        {
+            return this.Qualifica;
+        }
+
+        public override string GetInfo()
+        {
+            return base.GetInfo() + $" - Qualifica: {this.Qualifica}";
+        }
     }
 }

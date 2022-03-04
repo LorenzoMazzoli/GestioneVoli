@@ -30,7 +30,7 @@ namespace Voli_Library
             assistenti = new List<Assistente>();
         }
 
-        public void AddAeroporto(Aeromobile aero)
+        public void AddAeromobile(Aeromobile aero)
         {
             aeromobili.Add(aero); //aggiunge un aeromobile alla lista
         }
@@ -52,6 +52,20 @@ namespace Voli_Library
         public List<Aeroporto> GetAeroporti()
         {
             return aeroporti;
+        }
+
+        public List<Aeromobile> GetAeromobili()
+        {
+            return aeromobili;
+        }
+
+        public List<Assistente> GetAssistenti()
+        {
+            return assistenti;
+        }
+        public List<Pilota> GetPiloti()
+        {
+            return piloti;
         }
     }
 }

@@ -24,5 +24,24 @@ namespace Voli_Library
             Cognome = cognome;
             dataNascita = nascita;
         }
+
+        public string GetNome()
+        {
+            return this.Nome;
+        }
+
+        public string GetCognome()
+        {
+            return this.Cognome;
+        }
+        public DateTime GetDataNascita()
+        {
+            return this.dataNascita;
+        }
+
+        public virtual string GetInfo()
+        {
+            return $"Nome: {this.Nome} - Cognome: {this.Cognome} - Data di nascita: {this.dataNascita.ToString()}";
+        }
     }
 }
