@@ -14,12 +14,14 @@ namespace Voli_Library
         List<Aeroporto> aeroporti;
         List<Pilota> piloti;
         List<Assistente> assistenti;
+        List<Volo> voli;
         public CompagniaAerea()
         {
             aeromobili = new List<Aeromobile>();
             aeroporti = new List<Aeroporto>();
             piloti = new List<Pilota>();
             assistenti = new List<Assistente>();
+            voli = new List<Volo>();
         }
         public CompagniaAerea(string nome)
         {
@@ -28,6 +30,7 @@ namespace Voli_Library
             aeroporti = new List<Aeroporto>();
             piloti = new List<Pilota>();
             assistenti = new List<Assistente>();
+            voli = new List<Volo>();
         }
 
         public void AddAeromobile(Aeromobile aero)
@@ -66,6 +69,11 @@ namespace Voli_Library
         public List<Pilota> GetPiloti()
         {
             return piloti;
+        }
+
+        public List<Volo> GetVolo()
+        {
+            return voli;
         }
     }
 }

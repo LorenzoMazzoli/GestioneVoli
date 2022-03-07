@@ -33,14 +33,7 @@ namespace Voli
 
         private void btnChiudi_Click(object sender, EventArgs e)
         {
-            /*foreach (string citta in ListaNomiCitta)
-            {
-                if (cmbCitta.SelectedItem.ToString()=)
-                {
-
-                }
-            }
-            city = (Citta)cmbCitta.SelectedItem;*/
+           
             Close();
         }
 

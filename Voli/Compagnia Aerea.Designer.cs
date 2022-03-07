@@ -42,7 +42,7 @@ namespace Voli
             this.btnModificaCompagnia.Name = "btnModificaCompagnia";
             this.btnModificaCompagnia.Size = new System.Drawing.Size(243, 60);
             this.btnModificaCompagnia.TabIndex = 0;
-            this.btnModificaCompagnia.Text = "Aggiungi Componenti";
+            this.btnModificaCompagnia.Text = "Componenti";
             this.btnModificaCompagnia.UseVisualStyleBackColor = true;
             this.btnModificaCompagnia.Click += new System.EventHandler(this.btnModificaCompagnia_Click);
             // 
@@ -54,6 +54,8 @@ namespace Voli
             this.lblTitolo.Name = "lblTitolo";
             this.lblTitolo.Size = new System.Drawing.Size(363, 61);
             this.lblTitolo.TabIndex = 1;
+            this.lblTitolo.Text = "Compagnia aerea";
+            this.lblTitolo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAddViaggio
             // 
@@ -63,14 +65,14 @@ namespace Voli
             this.btnAddViaggio.Name = "btnAddViaggio";
             this.btnAddViaggio.Size = new System.Drawing.Size(243, 51);
             this.btnAddViaggio.TabIndex = 2;
-            this.btnAddViaggio.Text = "Aggiungi Viaggio";
+            this.btnAddViaggio.Text = " Viaggio";
             this.btnAddViaggio.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 525);
+            this.ClientSize = new System.Drawing.Size(914, 391);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.lblTitolo);
             this.Controls.Add(this.btnModificaCompagnia);

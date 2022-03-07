@@ -370,7 +370,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 480);
+            this.ClientSize = new System.Drawing.Size(894, 480);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -390,6 +390,7 @@ namespace Voli
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAddVolo";
             this.Text = "frmAddVolo";
+            this.Load += new System.EventHandler(this.frmAddVolo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
