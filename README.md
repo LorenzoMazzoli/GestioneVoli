@@ -17,3 +17,6 @@ Al click di ogni bottone sulla form principale, deve aprirsi un'altra form che c
 Dopo aver svolto questa parte, passeremo alla possibilità di creare nuovi viaggi.
 Solo nel caso in cui avanzasse del tempo (o ne venisse aggiunto altro) abbiamo l'intenzione di creare un esempio di interfaccia che dovrebbe trovarsi l'utente che sceglie di
 prenotare un volo (non un membro della compagnia quindi, un vero e proprio cliente).
+
+
+Link GANTT:  https://docs.google.com/spreadsheets/d/13ekKmhwnwHjoIwZ3TDVGFs1YLiQD6IrY26azvkFaQew/edit?usp=sharing
