@@ -29,31 +29,33 @@ namespace Voli
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCodiceVolo = new System.Windows.Forms.TextBox();
             this.lblCodiceVolo = new System.Windows.Forms.Label();
             this.btnSalva = new System.Windows.Forms.Button();
             this.btnChiudi = new System.Windows.Forms.Button();
-            this.cmbOra = new System.Windows.Forms.ComboBox();
-            this.cmbMinuti = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbAeroportiPartenza = new System.Windows.Forms.ComboBox();
             this.lblAeroportoPartenza = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbAeroportoArrivo = new System.Windows.Forms.ComboBox();
-            this.cmbOraArrivo = new System.Windows.Forms.ComboBox();
-            this.cmbMinutiPartenza = new System.Windows.Forms.ComboBox();
+            this.cmbAeroportiArrivo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.rtmOrarioArrivo = new Telerik.WinControls.UI.RadTimePicker();
+            this.radClock1 = new Telerik.WinControls.UI.RadClock();
+            this.pnlClok = new System.Windows.Forms.Panel();
+            this.rtmOrarioPartenza = new Telerik.WinControls.UI.RadTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.rtmOrarioArrivo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radClock1)).BeginInit();
+            this.pnlClok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rtmOrarioPartenza)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtCodiceVolo
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 69);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtCodiceVolo.Location = new System.Drawing.Point(200, 64);
+            this.txtCodiceVolo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCodiceVolo.Name = "txtCodiceVolo";
+            this.txtCodiceVolo.Size = new System.Drawing.Size(206, 27);
+            this.txtCodiceVolo.TabIndex = 0;
             // 
             // lblCodiceVolo
             // 
@@ -75,6 +77,7 @@ namespace Voli
             this.btnSalva.TabIndex = 2;
             this.btnSalva.Text = "Salva";
             this.btnSalva.UseVisualStyleBackColor = true;
+            this.btnSalva.Click += new System.EventHandler(this.btnSalva_Click);
             // 
             // btnChiudi
             // 
@@ -88,116 +91,14 @@ namespace Voli
             this.btnChiudi.UseVisualStyleBackColor = true;
             this.btnChiudi.Click += new System.EventHandler(this.btnChiudi_Click);
             // 
-            // cmbOra
+            // cmbAeroportiPartenza
             // 
-            this.cmbOra.FormattingEnabled = true;
-            this.cmbOra.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.cmbOra.Location = new System.Drawing.Point(69, 196);
-            this.cmbOra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbOra.Name = "cmbOra";
-            this.cmbOra.Size = new System.Drawing.Size(54, 28);
-            this.cmbOra.TabIndex = 4;
-            // 
-            // cmbMinuti
-            // 
-            this.cmbMinuti.FormattingEnabled = true;
-            this.cmbMinuti.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
-            this.cmbMinuti.Location = new System.Drawing.Point(142, 196);
-            this.cmbMinuti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbMinuti.Name = "cmbMinuti";
-            this.cmbMinuti.Size = new System.Drawing.Size(55, 28);
-            this.cmbMinuti.TabIndex = 5;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(69, 319);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 28);
-            this.comboBox1.TabIndex = 8;
+            this.cmbAeroportiPartenza.FormattingEnabled = true;
+            this.cmbAeroportiPartenza.Location = new System.Drawing.Point(69, 319);
+            this.cmbAeroportiPartenza.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbAeroportiPartenza.Name = "cmbAeroportiPartenza";
+            this.cmbAeroportiPartenza.Size = new System.Drawing.Size(138, 28);
+            this.cmbAeroportiPartenza.TabIndex = 8;
             // 
             // lblAeroportoPartenza
             // 
@@ -217,117 +118,14 @@ namespace Voli
             this.label1.Text = "Aeroporto Arrivo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cmbAeroportoArrivo
+            // cmbAeroportiArrivo
             // 
-            this.cmbAeroportoArrivo.FormattingEnabled = true;
-            this.cmbAeroportoArrivo.Location = new System.Drawing.Point(243, 319);
-            this.cmbAeroportoArrivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbAeroportoArrivo.Name = "cmbAeroportoArrivo";
-            this.cmbAeroportoArrivo.Size = new System.Drawing.Size(138, 28);
-            this.cmbAeroportoArrivo.TabIndex = 11;
-            // 
-            // cmbOraArrivo
-            // 
-            this.cmbOraArrivo.FormattingEnabled = true;
-            this.cmbOraArrivo.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.cmbOraArrivo.Location = new System.Drawing.Point(255, 199);
-            this.cmbOraArrivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbOraArrivo.Name = "cmbOraArrivo";
-            this.cmbOraArrivo.Size = new System.Drawing.Size(54, 28);
-            this.cmbOraArrivo.TabIndex = 14;
-            // 
-            // cmbMinutiPartenza
-            // 
-            this.cmbMinutiPartenza.FormattingEnabled = true;
-            this.cmbMinutiPartenza.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
-            this.cmbMinutiPartenza.Location = new System.Drawing.Point(334, 199);
-            this.cmbMinutiPartenza.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbMinutiPartenza.MaxDropDownItems = 1;
-            this.cmbMinutiPartenza.Name = "cmbMinutiPartenza";
-            this.cmbMinutiPartenza.Size = new System.Drawing.Size(56, 28);
-            this.cmbMinutiPartenza.TabIndex = 15;
+            this.cmbAeroportiArrivo.FormattingEnabled = true;
+            this.cmbAeroportiArrivo.Location = new System.Drawing.Point(243, 319);
+            this.cmbAeroportiArrivo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbAeroportiArrivo.Name = "cmbAeroportiArrivo";
+            this.cmbAeroportiArrivo.Size = new System.Drawing.Size(138, 28);
+            this.cmbAeroportiArrivo.TabIndex = 11;
             // 
             // label2
             // 
@@ -338,16 +136,6 @@ namespace Voli
             this.label2.TabIndex = 16;
             this.label2.Text = "Orario di Partenza";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(129, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 17;
-            this.label3.Text = ":";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -357,40 +145,75 @@ namespace Voli
             this.label4.TabIndex = 18;
             this.label4.Text = "Orario di arrivo";
             // 
-            // label5
+            // rtmOrarioArrivo
             // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(315, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 28);
-            this.label5.TabIndex = 19;
-            this.label5.Text = ":";
+            this.rtmOrarioArrivo.Location = new System.Drawing.Point(250, 193);
+            this.rtmOrarioArrivo.MaxValue = new System.DateTime(9999, 12, 31, 23, 59, 59, 0);
+            this.rtmOrarioArrivo.MinValue = new System.DateTime(((long)(0)));
+            this.rtmOrarioArrivo.Name = "rtmOrarioArrivo";
+            this.rtmOrarioArrivo.Size = new System.Drawing.Size(156, 24);
+            this.rtmOrarioArrivo.TabIndex = 21;
+            this.rtmOrarioArrivo.TabStop = false;
+            this.rtmOrarioArrivo.ThemeName = "Fluent";
+            this.rtmOrarioArrivo.Value = new System.DateTime(2022, 3, 8, 11, 20, 30, 762);
+            // 
+            // radClock1
+            // 
+            this.radClock1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.radClock1.Location = new System.Drawing.Point(12, 9);
+            this.radClock1.Name = "radClock1";
+            this.radClock1.Size = new System.Drawing.Size(134, 135);
+            this.radClock1.TabIndex = 23;
+            this.radClock1.ThemeName = "Fluent";
+            // 
+            // pnlClok
+            // 
+            this.pnlClok.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pnlClok.Controls.Add(this.radClock1);
+            this.pnlClok.Location = new System.Drawing.Point(461, 145);
+            this.pnlClok.Name = "pnlClok";
+            this.pnlClok.Size = new System.Drawing.Size(160, 155);
+            this.pnlClok.TabIndex = 24;
+            // 
+            // rtmOrarioPartenza
+            // 
+            this.rtmOrarioPartenza.Location = new System.Drawing.Point(57, 193);
+            this.rtmOrarioPartenza.MaxValue = new System.DateTime(9999, 12, 31, 23, 59, 59, 0);
+            this.rtmOrarioPartenza.MinValue = new System.DateTime(((long)(0)));
+            this.rtmOrarioPartenza.Name = "rtmOrarioPartenza";
+            this.rtmOrarioPartenza.Size = new System.Drawing.Size(156, 28);
+            this.rtmOrarioPartenza.TabIndex = 22;
+            this.rtmOrarioPartenza.TabStop = false;
+            this.rtmOrarioPartenza.ThemeName = "Fluent";
+            this.rtmOrarioPartenza.Value = new System.DateTime(2022, 3, 8, 11, 20, 55, 548);
             // 
             // frmAddVolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 480);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(712, 480);
+            this.Controls.Add(this.pnlClok);
+            this.Controls.Add(this.rtmOrarioPartenza);
+            this.Controls.Add(this.rtmOrarioArrivo);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbMinutiPartenza);
-            this.Controls.Add(this.cmbOraArrivo);
-            this.Controls.Add(this.cmbAeroportoArrivo);
+            this.Controls.Add(this.cmbAeroportiArrivo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAeroportoPartenza);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cmbMinuti);
-            this.Controls.Add(this.cmbOra);
+            this.Controls.Add(this.cmbAeroportiPartenza);
             this.Controls.Add(this.btnChiudi);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.lblCodiceVolo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCodiceVolo);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAddVolo";
             this.Text = "frmAddVolo";
             this.Load += new System.EventHandler(this.frmAddVolo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rtmOrarioArrivo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radClock1)).EndInit();
+            this.pnlClok.ResumeLayout(false);
+            this.pnlClok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rtmOrarioPartenza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,21 +221,19 @@ namespace Voli
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCodiceVolo;
         private System.Windows.Forms.Label lblCodiceVolo;
         private System.Windows.Forms.Button btnSalva;
         private System.Windows.Forms.Button btnChiudi;
-        private System.Windows.Forms.ComboBox cmbOra;
-        private System.Windows.Forms.ComboBox cmbMinuti;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbAeroportiPartenza;
         private System.Windows.Forms.Label lblAeroportoPartenza;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbAeroportoArrivo;
-        private System.Windows.Forms.ComboBox cmbOraArrivo;
-        private System.Windows.Forms.ComboBox cmbMinutiPartenza;
+        private System.Windows.Forms.ComboBox cmbAeroportiArrivo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private Telerik.WinControls.UI.RadTimePicker rtmOrarioArrivo;
+        private Telerik.WinControls.UI.RadTimePicker rtmOrarioPartenza;
+        private Telerik.WinControls.UI.RadClock radClock1;
+        private System.Windows.Forms.Panel pnlClok;
     }
 }

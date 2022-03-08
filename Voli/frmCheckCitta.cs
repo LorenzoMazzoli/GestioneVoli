@@ -8,24 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Voli_Library;
-using Telerik;
 
 namespace Voli
 {
-    public partial class frmCheckVoli : Form
+    public partial class frmCheckCitta : Form
     {
-        List<Volo> voli = new List<Volo>();
-        public frmCheckVoli(List<Volo> voli)
+        List<Citta> cittas = new List<Citta>();
+        public frmCheckCitta(List<Citta> cittas)
         {
             InitializeComponent();
-            this.voli = voli;
+            this.cittas = cittas;
         }
 
-        private void frmCheckVoli_Load(object sender, EventArgs e)
+        private void frmCheckCitta_Load(object sender, EventArgs e)
         {
-            foreach (Volo v in voli)
+            foreach (Citta c in cittas)
             {
-                rlcCheckVoli.Items.Add(v.GetInfo());
+                lbCheckCitta.Items.Add(c.GetNome());
             }
         }
     }

@@ -44,12 +44,15 @@ namespace Voli
             this.btnCheckPersonale = new System.Windows.Forms.Button();
             this.btnCheckAeromobili = new System.Windows.Forms.Button();
             this.btnAddAssistente = new System.Windows.Forms.Button();
+            this.btnCheckCitta = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnAddCitta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddVolo
             // 
             this.btnAddVolo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddVolo.Location = new System.Drawing.Point(331, 101);
+            this.btnAddVolo.Location = new System.Drawing.Point(327, 333);
             this.btnAddVolo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddVolo.Name = "btnAddVolo";
             this.btnAddVolo.Size = new System.Drawing.Size(230, 67);
@@ -61,7 +64,7 @@ namespace Voli
             // btnAddAeromobile
             // 
             this.btnAddAeromobile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddAeromobile.Location = new System.Drawing.Point(331, 326);
+            this.btnAddAeromobile.Location = new System.Drawing.Point(327, 80);
             this.btnAddAeromobile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddAeromobile.Name = "btnAddAeromobile";
             this.btnAddAeromobile.Size = new System.Drawing.Size(230, 67);
@@ -73,7 +76,7 @@ namespace Voli
             // btnAddAerporto
             // 
             this.btnAddAerporto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddAerporto.Location = new System.Drawing.Point(331, 176);
+            this.btnAddAerporto.Location = new System.Drawing.Point(327, 253);
             this.btnAddAerporto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddAerporto.Name = "btnAddAerporto";
             this.btnAddAerporto.Size = new System.Drawing.Size(230, 67);
@@ -85,7 +88,7 @@ namespace Voli
             // btnAddPilota
             // 
             this.btnAddPilota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddPilota.Location = new System.Drawing.Point(331, 251);
+            this.btnAddPilota.Location = new System.Drawing.Point(327, 169);
             this.btnAddPilota.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddPilota.Name = "btnAddPilota";
             this.btnAddPilota.Size = new System.Drawing.Size(117, 67);
@@ -97,7 +100,7 @@ namespace Voli
             // btnChiudi
             // 
             this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChiudi.Location = new System.Drawing.Point(387, 423);
+            this.btnChiudi.Location = new System.Drawing.Point(381, 501);
             this.btnChiudi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.Size = new System.Drawing.Size(109, 61);
@@ -110,7 +113,7 @@ namespace Voli
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 101);
+            this.label1.Location = new System.Drawing.Point(103, 333);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 67);
             this.label1.TabIndex = 5;
@@ -130,7 +133,7 @@ namespace Voli
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(37, 176);
+            this.label3.Location = new System.Drawing.Point(32, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(258, 67);
             this.label3.TabIndex = 7;
@@ -140,7 +143,7 @@ namespace Voli
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(37, 251);
+            this.label4.Location = new System.Drawing.Point(33, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(257, 67);
             this.label4.TabIndex = 8;
@@ -150,7 +153,7 @@ namespace Voli
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(24, 326);
+            this.label5.Location = new System.Drawing.Point(20, 80);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(292, 67);
             this.label5.TabIndex = 9;
@@ -159,7 +162,7 @@ namespace Voli
             // btnCheckVoli
             // 
             this.btnCheckVoli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckVoli.Location = new System.Drawing.Point(598, 101);
+            this.btnCheckVoli.Location = new System.Drawing.Point(594, 333);
             this.btnCheckVoli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckVoli.Name = "btnCheckVoli";
             this.btnCheckVoli.Size = new System.Drawing.Size(230, 67);
@@ -171,7 +174,7 @@ namespace Voli
             // btnCheckAeroporti
             // 
             this.btnCheckAeroporti.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckAeroporti.Location = new System.Drawing.Point(598, 176);
+            this.btnCheckAeroporti.Location = new System.Drawing.Point(594, 253);
             this.btnCheckAeroporti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckAeroporti.Name = "btnCheckAeroporti";
             this.btnCheckAeroporti.Size = new System.Drawing.Size(230, 67);
@@ -183,7 +186,7 @@ namespace Voli
             // btnCheckPersonale
             // 
             this.btnCheckPersonale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckPersonale.Location = new System.Drawing.Point(598, 251);
+            this.btnCheckPersonale.Location = new System.Drawing.Point(594, 169);
             this.btnCheckPersonale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckPersonale.Name = "btnCheckPersonale";
             this.btnCheckPersonale.Size = new System.Drawing.Size(230, 67);
@@ -195,7 +198,7 @@ namespace Voli
             // btnCheckAeromobili
             // 
             this.btnCheckAeromobili.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckAeromobili.Location = new System.Drawing.Point(598, 326);
+            this.btnCheckAeromobili.Location = new System.Drawing.Point(594, 80);
             this.btnCheckAeromobili.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckAeromobili.Name = "btnCheckAeromobili";
             this.btnCheckAeromobili.Size = new System.Drawing.Size(230, 67);
@@ -207,7 +210,7 @@ namespace Voli
             // btnAddAssistente
             // 
             this.btnAddAssistente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddAssistente.Location = new System.Drawing.Point(454, 251);
+            this.btnAddAssistente.Location = new System.Drawing.Point(450, 169);
             this.btnAddAssistente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddAssistente.Name = "btnAddAssistente";
             this.btnAddAssistente.Size = new System.Drawing.Size(107, 67);
@@ -216,11 +219,48 @@ namespace Voli
             this.btnAddAssistente.UseVisualStyleBackColor = true;
             this.btnAddAssistente.Click += new System.EventHandler(this.btnAddAssistente_Click);
             // 
+            // btnCheckCitta
+            // 
+            this.btnCheckCitta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCheckCitta.Location = new System.Drawing.Point(594, 417);
+            this.btnCheckCitta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCheckCitta.Name = "btnCheckCitta";
+            this.btnCheckCitta.Size = new System.Drawing.Size(230, 67);
+            this.btnCheckCitta.TabIndex = 16;
+            this.btnCheckCitta.Text = "Visualizza città";
+            this.btnCheckCitta.UseVisualStyleBackColor = true;
+            this.btnCheckCitta.Click += new System.EventHandler(this.btnCheckCitta_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(103, 417);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 67);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Città";
+            // 
+            // btnAddCitta
+            // 
+            this.btnAddCitta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddCitta.Location = new System.Drawing.Point(327, 417);
+            this.btnAddCitta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddCitta.Name = "btnAddCitta";
+            this.btnAddCitta.Size = new System.Drawing.Size(230, 67);
+            this.btnAddCitta.TabIndex = 14;
+            this.btnAddCitta.Text = "Aggiungi città";
+            this.btnAddCitta.UseVisualStyleBackColor = true;
+            this.btnAddCitta.Click += new System.EventHandler(this.btnAddCitta_Click);
+            // 
             // frmComponenti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 497);
+            this.ClientSize = new System.Drawing.Size(853, 575);
+            this.Controls.Add(this.btnCheckCitta);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnAddCitta);
             this.Controls.Add(this.btnAddAssistente);
             this.Controls.Add(this.btnCheckAeromobili);
             this.Controls.Add(this.btnCheckPersonale);
@@ -262,5 +302,8 @@ namespace Voli
         private System.Windows.Forms.Button btnCheckPersonale;
         private System.Windows.Forms.Button btnCheckAeromobili;
         private System.Windows.Forms.Button btnAddAssistente;
+        private System.Windows.Forms.Button btnCheckCitta;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAddCitta;
     }
 }

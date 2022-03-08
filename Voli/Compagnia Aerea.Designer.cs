@@ -37,7 +37,7 @@ namespace Voli
             // btnModificaCompagnia
             // 
             this.btnModificaCompagnia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnModificaCompagnia.Location = new System.Drawing.Point(320, 159);
+            this.btnModificaCompagnia.Location = new System.Drawing.Point(154, 148);
             this.btnModificaCompagnia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnModificaCompagnia.Name = "btnModificaCompagnia";
             this.btnModificaCompagnia.Size = new System.Drawing.Size(243, 60);
@@ -48,9 +48,9 @@ namespace Voli
             // 
             // lblTitolo
             // 
-            this.lblTitolo.BackColor = System.Drawing.Color.LightSalmon;
+            this.lblTitolo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lblTitolo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitolo.Location = new System.Drawing.Point(258, 35);
+            this.lblTitolo.Location = new System.Drawing.Point(92, 36);
             this.lblTitolo.Name = "lblTitolo";
             this.lblTitolo.Size = new System.Drawing.Size(363, 61);
             this.lblTitolo.TabIndex = 1;
@@ -60,10 +60,10 @@ namespace Voli
             // btnAddViaggio
             // 
             this.btnAddViaggio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddViaggio.Location = new System.Drawing.Point(320, 268);
+            this.btnAddViaggio.Location = new System.Drawing.Point(154, 259);
             this.btnAddViaggio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddViaggio.Name = "btnAddViaggio";
-            this.btnAddViaggio.Size = new System.Drawing.Size(243, 51);
+            this.btnAddViaggio.Size = new System.Drawing.Size(243, 61);
             this.btnAddViaggio.TabIndex = 2;
             this.btnAddViaggio.Text = " Viaggio";
             this.btnAddViaggio.UseVisualStyleBackColor = true;
@@ -72,7 +72,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 391);
+            this.ClientSize = new System.Drawing.Size(574, 391);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.lblTitolo);
             this.Controls.Add(this.btnModificaCompagnia);

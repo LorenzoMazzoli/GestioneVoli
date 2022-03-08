@@ -8,16 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Voli_Library;
+using Telerik;
 
 namespace Voli
 {
     public partial class frmAddVolo : Form
     {
         string Codice { get; set; }
+        Aeroporto AeroportoPartenza;        
+        Aeroporto AeroportoArrivo;
+        TimeSpan orarioPartenza;
+        TimeSpan orarioArrivo;
+        List<Aeroporto> AeroportiArrivo = new List<Aeroporto>();
+        List<Aeroporto> AeroportiPartenza = new List<Aeroporto>();
+        List<string> nomiAeroportiArrivo = new List<string>();
+        List<string> nomiAeroportiPartenza = new List<string>();
         
-        public frmAddVolo()
+        public frmAddVolo(List<Aeroporto> aeroporti)
         {
             InitializeComponent();
+            foreach (Aeroporto a in aeroporti)
+            {
+                this.AeroportiArrivo.Add(a);
+                this.AeroportiPartenza.Add(a);
+                nomiAeroportiPartenza.Add(a.GetNome());
+                nomiAeroportiArrivo.Add(a.GetNome());
+            }
         }
 
         private void btnChiudi_Click(object sender, EventArgs e)
@@ -27,19 +43,55 @@ namespace Voli
 
         private void frmAddVolo_Load(object sender, EventArgs e)
         {
-            /*this.dateTimePicker1.CustomFormat = "HH:mm tt";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.ShowUpDown = true;*/
-            /*TimePicker timePicker = new TimePicker(0, false, true);
-            var tokens = timePicker.Tokens;
-            tokens.Clear();
-            timePicker.Mask = "99:99\\ LL";
-            timePicker.DateTimeFormat = "hh:mm tt";
-            timePicker.Value = timePicker.TextToValue(timePicker.ValueToText(DateTime.Now));
-            tokens[0].MinValue = 1;
-            tokens[0].MaxValue = 13;
-            tokens[2].MaxValue = 60;
-            tokens[tokens.Count - 1].CustomValues = new Object[] { "AM", "PM" };*/
+            cmbAeroportiPartenza.DataSource = nomiAeroportiPartenza;
+            cmbAeroportiArrivo.DataSource = nomiAeroportiArrivo;
+
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            Codice = txtCodiceVolo.Text;
+            foreach (Aeroporto a in AeroportiPartenza)
+            {
+                if (a.GetNome() == (string)cmbAeroportiPartenza.SelectedItem)
+                {
+                    AeroportoPartenza = a;
+                }
+               
+            }
+            foreach (Aeroporto a in AeroportiArrivo)
+            {
+                if (a.GetNome() == (string)cmbAeroportiArrivo.SelectedItem)
+                {
+                    AeroportoArrivo = a;
+                }
+            }
+            orarioPartenza = (TimeSpan)rtmOrarioPartenza.Value.Value.TimeOfDay;
+            orarioArrivo = (TimeSpan)rtmOrarioArrivo.Value.Value.TimeOfDay;
+        }
+
+        public string GetCodice()
+        {
+            return this.Codice;
+        }
+
+        public Aeroporto GetAeroportoPartenza()
+        {
+            return this.AeroportoPartenza;
+        }
+        public Aeroporto GetAeroportoArrivo()
+        {
+            return this.AeroportoArrivo;
+        }
+
+        public TimeSpan GetOrarioPartenza()
+        {
+            return this.orarioPartenza;
+        }
+
+        public TimeSpan GetOrarioArrivo()
+        {
+            return this.orarioArrivo;
         }
     }
 }

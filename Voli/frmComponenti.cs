@@ -13,7 +13,6 @@ namespace Voli
     public partial class frmComponenti : Form
     {
         CompagniaAerea compagnia;
-        List<Citta> cities = new List<Citta>();
         
         public frmComponenti()
         {
@@ -22,12 +21,12 @@ namespace Voli
         private void frmComponenti_Load(object sender, EventArgs e)
         {
             compagnia = new CompagniaAerea();
-            cities.Add(new Citta("Roma"));
-            cities.Add(new Citta("Milano"));
-            cities.Add(new Citta("Napoli"));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Roma", "123", cities[0]));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Milano", "456", cities[1]));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Napoli", "789", cities[2]));
+            compagnia.AddCitta(new Citta("Roma"));
+            compagnia.AddCitta(new Citta("Milano"));
+            compagnia.AddCitta(new Citta("Napoli"));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Roma", "123", compagnia.GetCittas()[0]));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Milano", "456", compagnia.GetCittas()[1]));
+            compagnia.AddAeroporto(new Aeroporto("Aeroporto Napoli", "789", compagnia.GetCittas()[2]));
             compagnia.AddAeromobile(new Aeromobile("123", "737", "Boeing", DateTime.MinValue));
             compagnia.AddAeromobile(new Aeromobile("456", "A320", "Airbus", DateTime.MinValue));
             compagnia.AddAeromobile(new Aeromobile("789", "777", "Boeing", DateTime.MinValue));
@@ -37,18 +36,18 @@ namespace Voli
             compagnia.AddAssistente(new Assistente("Luca", "Russo", DateTime.MinValue, "Semplice"));
             compagnia.AddAssistente(new Assistente("Chiara", "Ferrari", DateTime.MinValue, "Responsabile"));
             compagnia.AddAssistente(new Assistente("Anna", "Ricci", DateTime.MinValue, "Capo cabina"));
-        }
-
-        private void btnChiudi_Click(object sender, EventArgs e)
-        {
-            Close();
+            compagnia.AddVolo(new Volo("123", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[0], compagnia.GetAeroporti()[1]));
+            compagnia.AddVolo(new Volo("456", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[1], compagnia.GetAeroporti()[2]));
+            compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));
         }
 
         private void btnVoli_Click(object sender, EventArgs e)
         {
-            frmAddVolo formAddVolo = new frmAddVolo();
+            frmAddVolo formAddVolo = new frmAddVolo(compagnia.GetAeroporti());
 
             formAddVolo.ShowDialog();
+
+            compagnia.AddVolo(new Volo(formAddVolo.GetCodice(), formAddVolo.GetOrarioPartenza(), formAddVolo.GetOrarioArrivo(), formAddVolo.GetAeroportoPartenza(), formAddVolo.GetAeroportoArrivo()));
         }
 
         private void btnAddPilota_Click(object sender, EventArgs e)
@@ -62,7 +61,7 @@ namespace Voli
 
         private void btnAeroporti_Click(object sender, EventArgs e)
         {
-            frmAddAeroporto formAddAeroporto = new frmAddAeroporto(cities);
+            frmAddAeroporto formAddAeroporto = new frmAddAeroporto(compagnia.GetCittas());
 
             formAddAeroporto.ShowDialog();
 
@@ -77,10 +76,29 @@ namespace Voli
 
             compagnia.AddAeromobile(new Aeromobile(formAddAeromobile.GetMatricola(), formAddAeromobile.GetMarca(), formAddAeromobile.GetModello(), formAddAeromobile.GetDataAcquisto()));
         }
+        private void btnAddAssistente_Click(object sender, EventArgs e)
+        {
+            frmAddPersonale formAddAssistente = new frmAddPersonale(false);
+
+            formAddAssistente.ShowDialog();
+
+            compagnia.AddAssistente(new Assistente(formAddAssistente.GetNome(), formAddAssistente.GetCognome(), formAddAssistente.GetDataNascita(), formAddAssistente.GetGrado()));
+
+        }
+
+        private void btnAddCitta_Click(object sender, EventArgs e)
+        {
+            frmAddCitta formAddCitta = new frmAddCitta();
+
+            formAddCitta.ShowDialog();
+
+            compagnia.AddCitta(new Citta(formAddCitta.GetNome()));
+            compagnia.AddCitta(new Citta(formAddCitta.GetNome()));
+        }
 
         private void btnCheckVoli_Click(object sender, EventArgs e)
         {
-            frmCheckVoli formCheckVoli = new frmCheckVoli();
+            frmCheckVoli formCheckVoli = new frmCheckVoli(compagnia.GetVoli());
 
             formCheckVoli.ShowDialog();
         }
@@ -106,14 +124,18 @@ namespace Voli
             formCheckAeromobili.ShowDialog();
         }
 
-        private void btnAddAssistente_Click(object sender, EventArgs e)
+        
+        private void btnCheckCitta_Click(object sender, EventArgs e)
         {
-            frmAddPersonale formAddAssistente = new frmAddPersonale(false);
+            frmCheckCitta formCeckCitta = new frmCheckCitta(compagnia.GetCittas());
 
-            formAddAssistente.ShowDialog();
-
-            compagnia.AddAssistente(new Assistente(formAddAssistente.GetNome(), formAddAssistente.GetCognome(), formAddAssistente.GetDataNascita(), formAddAssistente.GetGrado()));
-
+            formCeckCitta.ShowDialog();
         }
+        private void btnChiudi_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        
     }
 }

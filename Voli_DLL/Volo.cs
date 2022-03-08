@@ -6,20 +6,20 @@ namespace Voli_Library
     {
         string Codice { get; set; }
 
-        DateTime orarioDiPartenza;
-        DateTime orarioDiArrivo;
+        TimeSpan orarioDiPartenza;
+        TimeSpan orarioDiArrivo;
 
         Aeroporto aeroportoPartenza;
         Aeroporto aeroportoArrivo;
         public Volo()
         {
             Codice = "";
-            orarioDiArrivo = DateTime.MinValue;
-            orarioDiPartenza = DateTime.MinValue;
+            orarioDiArrivo = TimeSpan.MinValue;
+            orarioDiPartenza = TimeSpan.MinValue;
             aeroportoPartenza = null;
             aeroportoArrivo = null;
         }
-        public Volo(string codice, DateTime orarioPartenza, DateTime orarioArrivo, Aeroporto partenza, Aeroporto arrivo)
+        public Volo(string codice, TimeSpan orarioPartenza, TimeSpan orarioArrivo, Aeroporto partenza, Aeroporto arrivo)
         {
             Codice = codice;
             orarioDiPartenza = orarioPartenza;
@@ -33,12 +33,12 @@ namespace Voli_Library
             return this.Codice;
         }
 
-        public DateTime GetOrarioArrivo()
+        public TimeSpan GetOrarioArrivo()
         {
             return this.orarioDiArrivo;
         }
 
-        public DateTime GetOrarioPartenza()
+        public TimeSpan GetOrarioPartenza()
         {
             return this.orarioDiPartenza;
         }
@@ -51,6 +51,11 @@ namespace Voli_Library
         public Aeroporto GetAeroportoPartenza()
         {
             return this.aeroportoPartenza;
+        }
+
+        public string GetInfo()
+        {
+            return $"Codice: {this.Codice} - Orario di Partenza: {this.orarioDiPartenza.ToString("hh\\mm\\ss")} da: {this.aeroportoPartenza.GetNome()} - orario di arrivo: {this.orarioDiArrivo.ToString("hh\\mm\\ss")} a {this.aeroportoArrivo.GetNome()}";
         }
     }
 }
