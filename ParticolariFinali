@@ -1,0 +1,4 @@
+Impedire di poter mettere lo stesso codice per il volo
+Impedire di poter mettere lo stesso nome per più aeroporti
+Quando viene scelto un aeroporto in una comboBox, impedire di poterlo scegliere in un'altra comboBox
+Quando viene scritto all'interno di una comboBox, ti dà il suggerimento
