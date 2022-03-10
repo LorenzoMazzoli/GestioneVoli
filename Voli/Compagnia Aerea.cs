@@ -41,6 +41,8 @@ namespace Voli
             compagnia.AddVolo(new Volo("456", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[1], compagnia.GetAeroporti()[2]));
             compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));
             compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[0], compagnia.GetPiloti()[1], compagnia.GetAssistenti()));
+            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[1], compagnia.GetPiloti()[2], compagnia.GetAssistenti()));
+            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[2], compagnia.GetPiloti()[0], compagnia.GetAssistenti()));
         }
 
         private void btnModificaCompagnia_Click(object sender, EventArgs e)

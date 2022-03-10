@@ -43,5 +43,9 @@ namespace Voli_Library
         {
             return $"Nome: {this.Nome} - Cognome: {this.Cognome} - Data di nascita: {this.dataNascita.ToString()}";
         }
+        public string GetNomeCognome()
+        {
+            return this.GetNome() + " " + this.GetCognome();
+        }
     }
 }

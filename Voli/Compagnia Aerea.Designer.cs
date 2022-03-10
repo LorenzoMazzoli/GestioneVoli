@@ -65,7 +65,7 @@ namespace Voli
             this.btnAddViaggio.Name = "btnAddViaggio";
             this.btnAddViaggio.Size = new System.Drawing.Size(243, 61);
             this.btnAddViaggio.TabIndex = 2;
-            this.btnAddViaggio.Text = " Viaggio";
+            this.btnAddViaggio.Text = " Viaggi";
             this.btnAddViaggio.UseVisualStyleBackColor = true;
             this.btnAddViaggio.Click += new System.EventHandler(this.btnAddViaggio_Click);
             // 
