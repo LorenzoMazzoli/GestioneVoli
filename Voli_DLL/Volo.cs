@@ -55,7 +55,7 @@ namespace Voli_Library
 
         public string GetInfo()
         {
-            return $"Codice: {this.Codice} - Orario di Partenza: {this.orarioDiPartenza.ToString("hh\\mm\\ss")} da: {this.aeroportoPartenza.GetNome()} - orario di arrivo: {this.orarioDiArrivo.ToString("hh\\mm\\ss")} a {this.aeroportoArrivo.GetNome()}";
+            return $"Codice: {this.Codice} - Orario di Partenza: h{this.orarioDiPartenza.ToString("hh\\mm\\ss")} da: {this.aeroportoPartenza.GetNome()} - orario di arrivo: h{this.orarioDiArrivo.ToString("hh\\mm\\ss")} a {this.aeroportoArrivo.GetNome()}";
         }
     }
 }

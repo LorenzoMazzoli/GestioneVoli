@@ -8,19 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Voli_Library;
+
 namespace Voli
 {
     public partial class frmComponenti : Form
     {
-        CompagniaAerea compagnia;
+        CompagniaAerea compagnia = new CompagniaAerea();
         
-        public frmComponenti()
+        public frmComponenti(CompagniaAerea compagnia)
         {
             InitializeComponent();
+            this.compagnia = compagnia;
         }
         private void frmComponenti_Load(object sender, EventArgs e)
         {
-            compagnia = new CompagniaAerea();
+            /*compagnia = new CompagniaAerea();
             compagnia.AddCitta(new Citta("Roma"));
             compagnia.AddCitta(new Citta("Milano"));
             compagnia.AddCitta(new Citta("Napoli"));
@@ -38,7 +40,7 @@ namespace Voli
             compagnia.AddAssistente(new Assistente("Anna", "Ricci", DateTime.MinValue, "Capo cabina"));
             compagnia.AddVolo(new Volo("123", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[0], compagnia.GetAeroporti()[1]));
             compagnia.AddVolo(new Volo("456", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[1], compagnia.GetAeroporti()[2]));
-            compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));
+            compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));*/
         }
 
         private void btnVoli_Click(object sender, EventArgs e)
@@ -92,7 +94,6 @@ namespace Voli
 
             formAddCitta.ShowDialog();
 
-            compagnia.AddCitta(new Citta(formAddCitta.GetNome()));
             compagnia.AddCitta(new Citta(formAddCitta.GetNome()));
         }
 

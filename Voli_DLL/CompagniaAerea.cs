@@ -16,6 +16,7 @@ namespace Voli_Library
         List<Assistente> assistenti;
         List<Volo> voli;
         List<Citta> cittas;
+        List<Viaggio> viaggi;
         public CompagniaAerea()
         {
             aeromobili = new List<Aeromobile>();
@@ -24,6 +25,7 @@ namespace Voli_Library
             assistenti = new List<Assistente>();
             voli = new List<Volo>();
             cittas = new List<Citta>();
+            viaggi = new List<Viaggio>();
         }
         public CompagniaAerea(string nome)
         {
@@ -34,6 +36,7 @@ namespace Voli_Library
             assistenti = new List<Assistente>();
             voli = new List<Volo>();
             cittas = new List<Citta>();
+            viaggi = new List<Viaggio>();
         }
 
         public void AddAeromobile(Aeromobile aero)
@@ -65,6 +68,10 @@ namespace Voli_Library
         {
             voli.Add(volo);
         }
+        public void AddViaggio(Viaggio viaggio)
+        {
+            viaggi.Add(viaggio);
+        }
         public List<Aeroporto> GetAeroporti()
         {
             return aeroporti;
@@ -92,6 +99,10 @@ namespace Voli_Library
         public List<Citta> GetCittas()
         {
             return cittas;
+        }
+        public List<Viaggio> GetViaggi()
+        {
+            return viaggi;
         }
     }
 }

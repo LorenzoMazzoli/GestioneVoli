@@ -14,7 +14,7 @@ namespace Voli_Library
         Pilota pilotaPrincipale;
         Pilota coPilota;
 
-        List<Assistente> assistentiViaggio;
+        List<Assistente> assistentiViaggio = new List<Assistente>();
         public Viaggio()
         {
             dataPartenza = DateTime.MinValue;
@@ -23,13 +23,34 @@ namespace Voli_Library
             coPilota = null;
             assistentiViaggio = new List<Assistente>();
         }
-        public Viaggio(DateTime partenza, Pilota pilotaPrin, Pilota coPil)
+        public Viaggio(DateTime partenza, Pilota pilotaPrin, Pilota coPil, List<Assistente> assistenti)
         {
             dataPartenza = partenza;
             statoVolo = "Previsto";
             pilotaPrincipale = pilotaPrin;
             coPilota = coPil;
-            assistentiViaggio = new List<Assistente>();
+            assistentiViaggio = assistenti;
+        }
+
+        private List<Assistente> GetAssistenti()
+        {
+            return assistentiViaggio;
+        }
+        private string GetNomiAssistenti()
+        {
+            string outString = "";
+
+            foreach (Assistente a in assistentiViaggio)
+            {
+                outString += $"{a.GetNome()}; ";
+            }
+
+            return outString;
+        }
+
+        public string GetInfo()
+        {
+            return $"Data di partenza: {this.dataPartenza} - stato del volo: {this.statoVolo} - Pilota: {this.pilotaPrincipale} - Co Pilota: {this.coPilota} - Assistenti: {this.GetNomiAssistenti()}";
         }
     }
 }
