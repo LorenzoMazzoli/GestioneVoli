@@ -33,7 +33,6 @@ namespace Voli
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddViaggio = new System.Windows.Forms.Button();
             this.btnRemoveViaggio = new System.Windows.Forms.Button();
-            this.btnaggiorna = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.radlcVoli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,23 +73,13 @@ namespace Voli
             this.btnRemoveViaggio.TabIndex = 1;
             this.btnRemoveViaggio.Text = "Rimuovi viaggio";
             this.btnRemoveViaggio.UseVisualStyleBackColor = true;
-            // 
-            // btnaggiorna
-            // 
-            this.btnaggiorna.Location = new System.Drawing.Point(47, 324);
-            this.btnaggiorna.Name = "btnaggiorna";
-            this.btnaggiorna.Size = new System.Drawing.Size(94, 29);
-            this.btnaggiorna.TabIndex = 0;
-            this.btnaggiorna.Text = "button1";
-            this.btnaggiorna.UseVisualStyleBackColor = true;
-            this.btnaggiorna.Click += new System.EventHandler(this.btnaggiorna_Click);
+            this.btnRemoveViaggio.Click += new System.EventHandler(this.btnRemoveViaggio_Click);
             // 
             // frmViaggio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 500);
-            this.Controls.Add(this.btnaggiorna);
             this.Controls.Add(this.btnRemoveViaggio);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.label1);
@@ -110,6 +99,5 @@ namespace Voli
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddViaggio;
         private System.Windows.Forms.Button btnRemoveViaggio;
-        private System.Windows.Forms.Button btnaggiorna;
     }
 }

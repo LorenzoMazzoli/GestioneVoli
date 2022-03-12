@@ -22,25 +22,7 @@ namespace Voli
         }
         private void frmComponenti_Load(object sender, EventArgs e)
         {
-            /*compagnia = new CompagniaAerea();
-            compagnia.AddCitta(new Citta("Roma"));
-            compagnia.AddCitta(new Citta("Milano"));
-            compagnia.AddCitta(new Citta("Napoli"));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Roma", "123", compagnia.GetCittas()[0]));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Milano", "456", compagnia.GetCittas()[1]));
-            compagnia.AddAeroporto(new Aeroporto("Aeroporto Napoli", "789", compagnia.GetCittas()[2]));
-            compagnia.AddAeromobile(new Aeromobile("123", "737", "Boeing", DateTime.MinValue));
-            compagnia.AddAeromobile(new Aeromobile("456", "A320", "Airbus", DateTime.MinValue));
-            compagnia.AddAeromobile(new Aeromobile("789", "777", "Boeing", DateTime.MinValue));
-            compagnia.AddPilota(new Pilota("Mario", "Rossi", DateTime.MinValue, "1° banda dorata"));
-            compagnia.AddPilota(new Pilota("Luigi", "Verdi", DateTime.MinValue, "2° banda dorata"));
-            compagnia.AddPilota(new Pilota("Marco", "Bianchi", DateTime.MinValue, "3° banda dorata"));
-            compagnia.AddAssistente(new Assistente("Luca", "Russo", DateTime.MinValue, "Semplice"));
-            compagnia.AddAssistente(new Assistente("Chiara", "Ferrari", DateTime.MinValue, "Responsabile"));
-            compagnia.AddAssistente(new Assistente("Anna", "Ricci", DateTime.MinValue, "Capo cabina"));
-            compagnia.AddVolo(new Volo("123", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[0], compagnia.GetAeroporti()[1]));
-            compagnia.AddVolo(new Volo("456", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[1], compagnia.GetAeroporti()[2]));
-            compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));*/
+           
         }
 
         private void btnVoli_Click(object sender, EventArgs e)

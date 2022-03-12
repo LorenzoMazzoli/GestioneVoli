@@ -42,7 +42,14 @@ namespace Voli_Library
 
             foreach (Assistente a in assistentiViaggio)
             {
-                outString += $"{a.GetNome()}; ";
+                if (a == assistentiViaggio.Last())
+                {
+                    outString += $"{a.GetNome()} ";
+                }
+                else
+                {
+                    outString += $"{a.GetNome()}, ";
+                }
             }
 
             return outString;

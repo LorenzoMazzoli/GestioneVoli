@@ -47,5 +47,9 @@ namespace Voli_Library
         {
             return this.GetNome() + " " + this.GetCognome();
         }
+        public string NomeCognome
+        {
+            get { return Nome + " " + Cognome; }
+        }
     }
 }

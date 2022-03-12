@@ -27,5 +27,7 @@ namespace Voli_Library
         {
             return base.GetInfo() + $" - Qualifica: {this.Qualifica}";
         }
+
+        
     }
 }

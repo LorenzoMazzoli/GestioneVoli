@@ -18,12 +18,15 @@ namespace Voli
         Pilota pilota;
         Pilota coPilota;
         DateTime giornoViaggio;
-        List<Assistente> assistenti;
+        List<Assistente> assistentiPassati;
+        List<Assistente> assistentiViaggio;
+        
         public frmAddViaggio(CompagniaAerea compagnia)
         {
             InitializeComponent();
             this.compagnia = compagnia;
-            assistenti = new List<Assistente>();
+            assistentiPassati = compagnia.GetAssistenti();
+            assistentiViaggio = new List<Assistente>();
         }
 
         private void frmAddViaggio_Load(object sender, EventArgs e)
@@ -33,7 +36,7 @@ namespace Voli
                 cmbSelectPilota.Items.Add(p.GetNomeCognome());
                 cmbSelectCopilota.Items.Add(p.GetNomeCognome());
             }
-            foreach (Assistente a in compagnia.GetAssistenti())
+            foreach (Assistente a in assistentiPassati)
             {
                 clbSelectAssistenti.Items.Add(a.GetNomeCognome());
             }
@@ -49,17 +52,21 @@ namespace Voli
                 }
                 if (cmbSelectCopilota.Text == p.GetNomeCognome())
                 {
-                    pilota = p;
+                    coPilota = p;
                 }
             }
             giornoViaggio = dtpSelectGiorno.Value;
-            foreach (Assistente a in assistenti)
+            foreach (Assistente a in assistentiPassati)
             {
-                if (a.GetNomeCognome()==clbSelectAssistenti.CheckedItems.ToString())
+                foreach (string s in clbSelectAssistenti.CheckedItems)
                 {
-                    assistenti.Add(a);
+                    if (s == a.GetNomeCognome())
+                    {
+                        assistentiViaggio.Add(a);
+                    }
                 }
             }
+           
         }
 
         private void btnChiudi_Click(object sender, EventArgs e)
@@ -84,7 +91,7 @@ namespace Voli
 
         public List<Assistente> GetAssistenti()
         {
-            return assistenti;
+            return assistentiViaggio;
         }
     }
 }

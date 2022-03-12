@@ -36,15 +36,45 @@ namespace Voli
             FormAddViaggio.ShowDialog();
 
             compagnia.AddViaggio(new Viaggio(FormAddViaggio.GetGiorno(), FormAddViaggio.GetPilota(), FormAddViaggio.GetCopilota(), FormAddViaggio.GetAssistenti()));
-        }
-
-        private void btnaggiorna_Click(object sender, EventArgs e)
-        {
-            radlcVoli.DataSource = null;
+            
+            radlcVoli.Items.Clear();
             foreach (Viaggio v in compagnia.GetViaggi())
             {
                 radlcVoli.Items.Add(v.GetInfo());
             }
+        }
+
+        private void btnaggiorna_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRemoveViaggio_Click(object sender, EventArgs e)
+        {
+            if (radlcVoli.SelectedItem==null)
+            {
+                MessageBox.Show("Selezionare prima un viaggio");
+            }
+            else
+            {
+                try
+                {
+                    Viaggio v = compagnia.GetViaggi().First(v => radlcVoli.SelectedItem.ToString() == v.GetInfo());
+                    compagnia.GetViaggi().Remove(v);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                radlcVoli.Items.Clear();
+                foreach (Viaggio v in compagnia.GetViaggi())
+                {
+                    radlcVoli.Items.Add(v.GetInfo());
+                }
+            }
+            
         }
     }
 }
