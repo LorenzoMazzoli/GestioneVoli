@@ -24,14 +24,13 @@ namespace Voli
             //controlliamo che il pulsante sia stato cliccato per aggiungere un pilota o un assistente, eliminando label e combobox non necessari
             if (cliccato == true)
             {
-                lblQualifica.Dispose();
-                cmbQualifica.Dispose();
-                
+                lblQualifica.Visible = false;
+                cmbQualifica.Visible = false;
             }
             else
             {
-                lblGrado.Dispose();
-                cmbGrado.Dispose();
+                lblGrado.Visible = false;
+                cmbGrado.Visible = false;
             }
         }
 
@@ -43,19 +42,67 @@ namespace Voli
         private void btnSalva_Click(object sender, EventArgs e)
         {
             // per lo stesso principio di prima, controllo quale label e quale combobox sono presenti, per passare i parametri del futuro oggetto
-            if (lblQualifica.Disposing != true)
-            {
-                Nome = txtNome.Text;
-                Cognome = txtCognome.Text;
-                DataNascita = dtpDataNascita.Value;
-                Grado = (string)cmbGrado.SelectedItem;
+            if (lblQualifica.Visible != true)
+            { 
+                if (txtNome.Text == "" || txtCognome.Text == "" || cmbGrado.SelectedItem == null)
+                {
+                    MessageBox.Show("Inserire tutti i valori");
+                }
+                else
+                {
+                    if (dtpDataNascita.Value > DateTime.Now)
+                    {
+                        MessageBox.Show("Data di nascita non valida");
+                        dtpDataNascita.Value = DateTime.Now;
+                    }
+                    else
+                    {
+                        Nome = txtNome.Text;
+                        Cognome = txtCognome.Text;
+                        DataNascita = dtpDataNascita.Value;
+                        Grado = (string)cmbGrado.SelectedItem;
+                        foreach (Control c in Controls)
+                        {
+                            if (c is TextBox)
+                            {
+                                c.Text = "";
+                            }
+                            cmbGrado.Text = "";
+                        }
+                        dtpDataNascita.Value = DateTime.Now;
+                    }
+                }
             }
             else
             {
-                Nome = txtNome.Text;
-                Cognome = txtCognome.Text;
-                DataNascita = dtpDataNascita.Value;
-                Qualifica = (string)cmbQualifica.SelectedItem;
+                if (txtNome.Text == "" || txtCognome.Text == "" || cmbQualifica.SelectedItem == null)
+                {
+                    MessageBox.Show("Inserire tutti i valori");
+                }
+                else
+                {
+                    if (dtpDataNascita.Value > DateTime.Now)
+                    {
+                        MessageBox.Show("Data di nascita non valida");
+                        dtpDataNascita.Value = DateTime.Now;
+                    }
+                    else
+                    {
+                        Nome = txtNome.Text;
+                        Cognome = txtCognome.Text;
+                        DataNascita = dtpDataNascita.Value;
+                        Qualifica = (string)cmbQualifica.SelectedItem;
+                        foreach (Control c in Controls)
+                        {
+                            if (c is TextBox)
+                            {
+                                c.Text = "";
+                            }
+                            cmbQualifica.Text = "";
+                        }
+                        dtpDataNascita.Value = DateTime.Now;
+                    }
+                }
             }
         }
 

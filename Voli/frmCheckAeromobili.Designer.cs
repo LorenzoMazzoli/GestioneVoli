@@ -31,6 +31,7 @@ namespace Voli
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lbCheckAeromobili = new System.Windows.Forms.ListBox();
+            this.btnRemoveAeromobile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,16 +48,28 @@ namespace Voli
             // 
             this.lbCheckAeromobili.FormattingEnabled = true;
             this.lbCheckAeromobili.ItemHeight = 20;
-            this.lbCheckAeromobili.Location = new System.Drawing.Point(12, 70);
+            this.lbCheckAeromobili.Location = new System.Drawing.Point(209, 74);
             this.lbCheckAeromobili.Name = "lbCheckAeromobili";
             this.lbCheckAeromobili.Size = new System.Drawing.Size(776, 364);
             this.lbCheckAeromobili.TabIndex = 1;
+            // 
+            // btnRemoveAeromobile
+            // 
+            this.btnRemoveAeromobile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveAeromobile.Location = new System.Drawing.Point(12, 74);
+            this.btnRemoveAeromobile.Name = "btnRemoveAeromobile";
+            this.btnRemoveAeromobile.Size = new System.Drawing.Size(177, 64);
+            this.btnRemoveAeromobile.TabIndex = 2;
+            this.btnRemoveAeromobile.Text = "Rimuovi Aeromobile";
+            this.btnRemoveAeromobile.UseVisualStyleBackColor = true;
+            this.btnRemoveAeromobile.Click += new System.EventHandler(this.btnRemoveAeromobile_Click);
             // 
             // frmCheckAeromobili
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(997, 450);
+            this.Controls.Add(this.btnRemoveAeromobile);
             this.Controls.Add(this.lbCheckAeromobili);
             this.Controls.Add(this.label1);
             this.Name = "frmCheckAeromobili";
@@ -71,5 +84,6 @@ namespace Voli
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbCheckAeromobili;
+        private System.Windows.Forms.Button btnRemoveAeromobile;
     }
 }

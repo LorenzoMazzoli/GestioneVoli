@@ -147,7 +147,7 @@ namespace Voli
             this.Controls.Add(this.txtMatricola);
             this.Controls.Add(this.label1);
             this.Name = "frmAddAeromobile";
-            this.Text = "frmAddAeromobil";
+            this.Text = "Aggiungi aeromobile";
             this.ResumeLayout(false);
             this.PerformLayout();
 

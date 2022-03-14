@@ -39,7 +39,7 @@ namespace Voli
             // 
             this.lblNomeCitta.AutoSize = true;
             this.lblNomeCitta.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNomeCitta.Location = new System.Drawing.Point(97, 73);
+            this.lblNomeCitta.Location = new System.Drawing.Point(78, 77);
             this.lblNomeCitta.Name = "lblNomeCitta";
             this.lblNomeCitta.Size = new System.Drawing.Size(209, 35);
             this.lblNomeCitta.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace Voli
             // 
             // txtNomeCitta
             // 
-            this.txtNomeCitta.Location = new System.Drawing.Point(324, 82);
+            this.txtNomeCitta.Location = new System.Drawing.Point(305, 86);
             this.txtNomeCitta.Name = "txtNomeCitta";
             this.txtNomeCitta.Size = new System.Drawing.Size(136, 27);
             this.txtNomeCitta.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace Voli
             // btnSalva
             // 
             this.btnSalva.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalva.Location = new System.Drawing.Point(136, 197);
+            this.btnSalva.Location = new System.Drawing.Point(133, 172);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(94, 58);
             this.btnSalva.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace Voli
             // btnChiudi
             // 
             this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChiudi.Location = new System.Drawing.Point(324, 197);
+            this.btnChiudi.Location = new System.Drawing.Point(305, 172);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.Size = new System.Drawing.Size(107, 58);
             this.btnChiudi.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 336);
+            this.ClientSize = new System.Drawing.Size(525, 268);
             this.Controls.Add(this.btnChiudi);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.txtNomeCitta);

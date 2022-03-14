@@ -36,6 +36,8 @@ namespace Voli
                 {
                     lbCheckPersonale.Items.Add(p.GetInfo());
                 }
+
+                
             }
             if ((string)cmbTipoPersonale.SelectedItem == "Assistenti")
             {

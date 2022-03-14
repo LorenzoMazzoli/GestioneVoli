@@ -24,11 +24,35 @@ namespace Voli
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-         
-            Modello = txtModello.Text;
-            Marca = txtMarca.Text;
-            Matricola = txtMatricola.Text;
-            DataAcquisto = dtpDataAcquisto.Value;
+            if (txtModello.Text == "" || txtMarca.Text=="" || txtMatricola.Text=="" )
+            {
+                MessageBox.Show("Inserire tutti i valori");
+            }
+            else
+            {
+                if (dtpDataAcquisto.Value > DateTime.Now)
+                {
+                    MessageBox.Show("Data di acquisto non valida");
+                    dtpDataAcquisto.Value = DateTime.Now;
+                }
+                else
+                {
+                    Modello = txtModello.Text;
+                    Marca = txtMarca.Text;
+                    Matricola = txtMatricola.Text;
+                    DataAcquisto = dtpDataAcquisto.Value;
+                    foreach (Control c in Controls)
+                    {
+                        if (c is TextBox)
+                        {
+                            c.Text = "";
+                        }
+                    }
+                    dtpDataAcquisto.Value = DateTime.Now;
+                }
+                
+            }
+            
         }
 
         private void btnChiudi_Click(object sender, EventArgs e)

@@ -22,7 +22,14 @@ namespace Voli
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            Nome = txtNomeCitta.Text;
+            if (txtNomeCitta.Text=="")
+            {
+                MessageBox.Show("Inserire il nome della città");
+            }
+            else
+            {
+                Nome = txtNomeCitta.Text;
+            }
         }
 
         public string GetNome()

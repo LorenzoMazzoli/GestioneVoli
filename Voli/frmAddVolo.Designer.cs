@@ -151,7 +151,7 @@ namespace Voli
             this.rtmOrarioArrivo.MaxValue = new System.DateTime(9999, 12, 31, 23, 59, 59, 0);
             this.rtmOrarioArrivo.MinValue = new System.DateTime(((long)(0)));
             this.rtmOrarioArrivo.Name = "rtmOrarioArrivo";
-            this.rtmOrarioArrivo.Size = new System.Drawing.Size(156, 24);
+            this.rtmOrarioArrivo.Size = new System.Drawing.Size(156, 28);
             this.rtmOrarioArrivo.TabIndex = 21;
             this.rtmOrarioArrivo.TabStop = false;
             this.rtmOrarioArrivo.ThemeName = "Fluent";

@@ -64,14 +64,29 @@ namespace Voli
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            Nome = txbNome.Text;
-            Codice = txbCodice.Text;
-            foreach (Citta c in ListaCitta)
+            if (txbCodice.Text == "" || txbNome.Text == "" || cmbCitta.SelectedItem == null)
             {
-                if (c.GetNome()==(string)cmbCitta.SelectedItem)
+                MessageBox.Show("Inserire tutti i valori");
+            }
+            else
+            {
+                Nome = txbNome.Text;
+                Codice = txbCodice.Text;
+                foreach (Citta c in ListaCitta)
                 {
-                    city = c;
+                    if (c.GetNome() == (string)cmbCitta.SelectedItem)
+                    {
+                        city = c;
+                    }
                 }
+                foreach (Control c in Controls)
+                {
+                    if (c is TextBox)
+                    {
+                        c.Text = "";
+                    }
+                }
+                cmbCitta.Text = "";  
             }
         }
     }

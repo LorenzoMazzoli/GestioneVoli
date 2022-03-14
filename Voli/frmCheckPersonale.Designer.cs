@@ -32,6 +32,9 @@ namespace Voli
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTipoPersonale = new System.Windows.Forms.ComboBox();
             this.lbCheckPersonale = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnRemovePilota = new System.Windows.Forms.Button();
+            this.btnRemoveAssistente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,9 +53,9 @@ namespace Voli
             this.cmbTipoPersonale.Items.AddRange(new object[] {
             "Piloti",
             "Assistenti"});
-            this.cmbTipoPersonale.Location = new System.Drawing.Point(28, 93);
+            this.cmbTipoPersonale.Location = new System.Drawing.Point(12, 109);
             this.cmbTipoPersonale.Name = "cmbTipoPersonale";
-            this.cmbTipoPersonale.Size = new System.Drawing.Size(151, 28);
+            this.cmbTipoPersonale.Size = new System.Drawing.Size(182, 28);
             this.cmbTipoPersonale.TabIndex = 1;
             this.cmbTipoPersonale.SelectedIndexChanged += new System.EventHandler(this.cmbTipoPersonale_SelectedIndexChanged);
             // 
@@ -65,11 +68,44 @@ namespace Voli
             this.lbCheckPersonale.Size = new System.Drawing.Size(717, 344);
             this.lbCheckPersonale.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(182, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Personale da visualizzare";
+            // 
+            // btnRemovePilota
+            // 
+            this.btnRemovePilota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemovePilota.Location = new System.Drawing.Point(12, 166);
+            this.btnRemovePilota.Name = "btnRemovePilota";
+            this.btnRemovePilota.Size = new System.Drawing.Size(182, 59);
+            this.btnRemovePilota.TabIndex = 4;
+            this.btnRemovePilota.Text = "Rimuovi Pilota";
+            this.btnRemovePilota.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveAssistente
+            // 
+            this.btnRemoveAssistente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveAssistente.Location = new System.Drawing.Point(12, 240);
+            this.btnRemoveAssistente.Name = "btnRemoveAssistente";
+            this.btnRemoveAssistente.Size = new System.Drawing.Size(182, 59);
+            this.btnRemoveAssistente.TabIndex = 5;
+            this.btnRemoveAssistente.Text = "Rimuovi Assistente";
+            this.btnRemoveAssistente.UseVisualStyleBackColor = true;
+            // 
             // frmCheckPersonale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 450);
+            this.Controls.Add(this.btnRemoveAssistente);
+            this.Controls.Add(this.btnRemovePilota);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbCheckPersonale);
             this.Controls.Add(this.cmbTipoPersonale);
             this.Controls.Add(this.label1);
@@ -86,5 +122,8 @@ namespace Voli
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTipoPersonale;
         private System.Windows.Forms.ListBox lbCheckPersonale;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRemovePilota;
+        private System.Windows.Forms.Button btnRemoveAssistente;
     }
 }

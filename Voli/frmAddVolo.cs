@@ -50,24 +50,52 @@ namespace Voli
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            Codice = txtCodiceVolo.Text;
-            foreach (Aeroporto a in AeroportiPartenza)
+            if (txtCodiceVolo.Text == "" || cmbAeroportiArrivo.SelectedItem == null || cmbAeroportiPartenza.SelectedItem == null)
             {
-                if (a.GetNome() == (string)cmbAeroportiPartenza.SelectedItem)
-                {
-                    AeroportoPartenza = a;
-                }
-               
+                MessageBox.Show("Inserire tutti i valori");
             }
-            foreach (Aeroporto a in AeroportiArrivo)
+            else
             {
-                if (a.GetNome() == (string)cmbAeroportiArrivo.SelectedItem)
+                if (rtmOrarioArrivo.Value<rtmOrarioPartenza.Value)
                 {
-                    AeroportoArrivo = a;
+                    MessageBox.Show("Orario di arrivo non valido");
                 }
+                if (cmbAeroportiPartenza.SelectedItem == cmbAeroportiArrivo.SelectedItem)
+                {
+                    MessageBox.Show("Aeroporti non validi");
+                }
+                else
+                {
+                    Codice = txtCodiceVolo.Text;
+                    foreach (Aeroporto a in AeroportiPartenza)
+                    {
+                        if (a.GetNome() == (string)cmbAeroportiPartenza.SelectedItem)
+                        {
+                            AeroportoPartenza = a;
+                        }
+
+                    }
+                    foreach (Aeroporto a in AeroportiArrivo)
+                    {
+                        if (a.GetNome() == (string)cmbAeroportiArrivo.SelectedItem)
+                        {
+                            AeroportoArrivo = a;
+                        }
+                    }
+                    orarioPartenza = (TimeSpan)rtmOrarioPartenza.Value.Value.TimeOfDay;
+                    orarioArrivo = (TimeSpan)rtmOrarioArrivo.Value.Value.TimeOfDay;
+                    foreach (Control c in Controls)
+                    {
+                        if (c is TextBox)
+                        {
+                            c.Text = "";
+                        }
+                    }
+                    cmbAeroportiPartenza.Text = "";
+                    cmbAeroportiArrivo.Text = "";
+                }
+          
             }
-            orarioPartenza = (TimeSpan)rtmOrarioPartenza.Value.Value.TimeOfDay;
-            orarioArrivo = (TimeSpan)rtmOrarioArrivo.Value.Value.TimeOfDay;
         }
 
         public string GetCodice()
