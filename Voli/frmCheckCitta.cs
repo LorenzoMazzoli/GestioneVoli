@@ -27,5 +27,32 @@ namespace Voli
                 lbCheckCitta.Items.Add(c.GetNome());
             }
         }
+
+        private void btnRemoveCitta_Click(object sender, EventArgs e)
+        {
+            if (lbCheckCitta.SelectedItem == null)
+            {
+                MessageBox.Show("Selezionare prima una città");
+            }
+            else
+            {
+                try
+                {
+                    Citta citta = cittas.First(citta => lbCheckCitta.SelectedItem.ToString() == citta.GetNome());
+                    cittas.Remove(citta);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                lbCheckCitta.Items.Clear();
+                foreach (Citta citta in cittas)
+                {
+                    lbCheckCitta.Items.Add(citta.GetNome());
+                }
+            }
+        }
     }
 }

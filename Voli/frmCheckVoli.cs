@@ -25,7 +25,34 @@ namespace Voli
         {
             foreach (Volo v in voli)
             {
-                rlcCheckVoli.Items.Add(v.GetInfo());
+                lbCheckVoli.Items.Add(v.GetInfo());
+            }
+        }
+
+        private void btnRemoveVolo_Click(object sender, EventArgs e)
+        {
+            if (lbCheckVoli.SelectedItem == null)
+            {
+                MessageBox.Show("Selezionare prima un volo");
+            }
+            else
+            {
+                try
+                {
+                    Volo volo = voli.First(volo => lbCheckVoli.SelectedItem.ToString() == volo.GetInfo());
+                    voli.Remove(volo);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                lbCheckVoli.Items.Clear();
+                foreach (Volo volo in voli)
+                {
+                    lbCheckVoli.Items.Add(volo.GetInfo());
+                }
             }
         }
     }

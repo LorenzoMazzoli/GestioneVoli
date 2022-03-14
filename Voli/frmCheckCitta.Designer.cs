@@ -31,6 +31,7 @@ namespace Voli
         {
             this.label1 = new System.Windows.Forms.Label();
             this.lbCheckCitta = new System.Windows.Forms.ListBox();
+            this.btnRemoveCitta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,16 +48,28 @@ namespace Voli
             // 
             this.lbCheckCitta.FormattingEnabled = true;
             this.lbCheckCitta.ItemHeight = 20;
-            this.lbCheckCitta.Location = new System.Drawing.Point(113, 62);
+            this.lbCheckCitta.Location = new System.Drawing.Point(153, 67);
             this.lbCheckCitta.Name = "lbCheckCitta";
             this.lbCheckCitta.Size = new System.Drawing.Size(238, 164);
             this.lbCheckCitta.TabIndex = 1;
+            // 
+            // btnRemoveCitta
+            // 
+            this.btnRemoveCitta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveCitta.Location = new System.Drawing.Point(13, 71);
+            this.btnRemoveCitta.Name = "btnRemoveCitta";
+            this.btnRemoveCitta.Size = new System.Drawing.Size(123, 42);
+            this.btnRemoveCitta.TabIndex = 2;
+            this.btnRemoveCitta.Text = "Rimuovi Città";
+            this.btnRemoveCitta.UseVisualStyleBackColor = true;
+            this.btnRemoveCitta.Click += new System.EventHandler(this.btnRemoveCitta_Click);
             // 
             // frmCheckCitta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 265);
+            this.ClientSize = new System.Drawing.Size(457, 265);
+            this.Controls.Add(this.btnRemoveCitta);
             this.Controls.Add(this.lbCheckCitta);
             this.Controls.Add(this.label1);
             this.Name = "frmCheckCitta";
@@ -71,5 +84,6 @@ namespace Voli
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbCheckCitta;
+        private System.Windows.Forms.Button btnRemoveCitta;
     }
 }

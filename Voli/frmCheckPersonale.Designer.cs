@@ -87,16 +87,18 @@ namespace Voli
             this.btnRemovePilota.TabIndex = 4;
             this.btnRemovePilota.Text = "Rimuovi Pilota";
             this.btnRemovePilota.UseVisualStyleBackColor = true;
+            this.btnRemovePilota.Click += new System.EventHandler(this.btnRemovePilota_Click);
             // 
             // btnRemoveAssistente
             // 
             this.btnRemoveAssistente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemoveAssistente.Location = new System.Drawing.Point(12, 240);
+            this.btnRemoveAssistente.Location = new System.Drawing.Point(12, 166);
             this.btnRemoveAssistente.Name = "btnRemoveAssistente";
             this.btnRemoveAssistente.Size = new System.Drawing.Size(182, 59);
             this.btnRemoveAssistente.TabIndex = 5;
             this.btnRemoveAssistente.Text = "Rimuovi Assistente";
             this.btnRemoveAssistente.UseVisualStyleBackColor = true;
+            this.btnRemoveAssistente.Click += new System.EventHandler(this.btnRemoveAssistente_Click);
             // 
             // frmCheckPersonale
             // 

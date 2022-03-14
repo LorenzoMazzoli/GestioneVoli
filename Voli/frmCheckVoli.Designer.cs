@@ -29,40 +29,53 @@ namespace Voli
         /// </summary>
         private void InitializeComponent()
         {
-            this.rlcCheckVoli = new Telerik.WinControls.UI.RadListControl();
             this.radlblVoli = new Telerik.WinControls.UI.RadLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.rlcCheckVoli)).BeginInit();
+            this.btnRemoveVolo = new System.Windows.Forms.Button();
+            this.lbCheckVoli = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.radlblVoli)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rlcCheckVoli
-            // 
-            this.rlcCheckVoli.Location = new System.Drawing.Point(12, 91);
-            this.rlcCheckVoli.Name = "rlcCheckVoli";
-            this.rlcCheckVoli.Size = new System.Drawing.Size(776, 347);
-            this.rlcCheckVoli.TabIndex = 0;
             // 
             // radlblVoli
             // 
             this.radlblVoli.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radlblVoli.Location = new System.Drawing.Point(266, 27);
+            this.radlblVoli.Location = new System.Drawing.Point(159, 29);
             this.radlblVoli.Name = "radlblVoli";
             this.radlblVoli.Size = new System.Drawing.Size(283, 41);
             this.radlblVoli.TabIndex = 1;
             this.radlblVoli.Text = "Voli della compagnia";
             this.radlblVoli.ThemeName = "Fluent";
             // 
+            // btnRemoveVolo
+            // 
+            this.btnRemoveVolo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveVolo.Location = new System.Drawing.Point(12, 91);
+            this.btnRemoveVolo.Name = "btnRemoveVolo";
+            this.btnRemoveVolo.Size = new System.Drawing.Size(143, 63);
+            this.btnRemoveVolo.TabIndex = 0;
+            this.btnRemoveVolo.Text = "Rimuovi Volo";
+            this.btnRemoveVolo.UseVisualStyleBackColor = true;
+            this.btnRemoveVolo.Click += new System.EventHandler(this.btnRemoveVolo_Click);
+            // 
+            // lbCheckVoli
+            // 
+            this.lbCheckVoli.FormattingEnabled = true;
+            this.lbCheckVoli.ItemHeight = 20;
+            this.lbCheckVoli.Location = new System.Drawing.Point(161, 91);
+            this.lbCheckVoli.Name = "lbCheckVoli";
+            this.lbCheckVoli.Size = new System.Drawing.Size(744, 244);
+            this.lbCheckVoli.TabIndex = 2;
+            // 
             // frmCheckVoli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(917, 357);
+            this.Controls.Add(this.lbCheckVoli);
+            this.Controls.Add(this.btnRemoveVolo);
             this.Controls.Add(this.radlblVoli);
-            this.Controls.Add(this.rlcCheckVoli);
             this.Name = "frmCheckVoli";
             this.Text = "frmCheckVoli";
             this.Load += new System.EventHandler(this.frmCheckVoli_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.rlcCheckVoli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radlblVoli)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -70,8 +83,8 @@ namespace Voli
         }
 
         #endregion
-
-        private Telerik.WinControls.UI.RadListControl rlcCheckVoli;
         private Telerik.WinControls.UI.RadLabel radlblVoli;
+        private System.Windows.Forms.Button btnRemoveVolo;
+        private System.Windows.Forms.ListBox lbCheckVoli;
     }
 }

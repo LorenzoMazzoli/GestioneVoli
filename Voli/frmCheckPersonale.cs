@@ -23,7 +23,8 @@ namespace Voli
 
         private void frmCheckPersonale_Load(object sender, EventArgs e)
         {
-
+            btnRemoveAssistente.Visible = false;
+            btnRemovePilota.Visible = false;
         }
 
         private void cmbTipoPersonale_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,7 +38,8 @@ namespace Voli
                     lbCheckPersonale.Items.Add(p.GetInfo());
                 }
 
-                
+                btnRemoveAssistente.Visible = false;
+                btnRemovePilota.Visible = true;
             }
             if ((string)cmbTipoPersonale.SelectedItem == "Assistenti")
             {
@@ -45,6 +47,63 @@ namespace Voli
                 foreach (Assistente a in assistenti)
                 {
                     lbCheckPersonale.Items.Add(a.GetInfo());
+                }
+
+                btnRemoveAssistente.Visible = true;
+                btnRemovePilota.Visible = false;
+            }
+        }
+
+        private void btnRemovePilota_Click(object sender, EventArgs e)
+        {
+            if (lbCheckPersonale.SelectedItem == null)
+            {
+                MessageBox.Show("Selezionare prima un pilota");
+            }
+            else
+            {
+                try
+                {
+                    Pilota pilota = piloti.First(pilota => lbCheckPersonale.SelectedItem.ToString() == pilota.GetInfo());
+                    piloti.Remove(pilota);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                lbCheckPersonale.Items.Clear();
+                foreach (Pilota pilota in piloti)
+                {
+                    lbCheckPersonale.Items.Add(pilota.GetInfo());
+                }
+            }
+        }
+
+        private void btnRemoveAssistente_Click(object sender, EventArgs e)
+        {
+            if (lbCheckPersonale.SelectedItem == null)
+            {
+                MessageBox.Show("Selezionare prima un assistente");
+            }
+            else
+            {
+                try
+                {
+                    Assistente assistente = assistenti.First(assistente => lbCheckPersonale.SelectedItem.ToString() == assistente.GetInfo());
+                    assistenti.Remove(assistente);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                lbCheckPersonale.Items.Clear();
+                foreach (Assistente assistente in assistenti)
+                {
+                    lbCheckPersonale.Items.Add(assistente.GetInfo());
                 }
             }
         }

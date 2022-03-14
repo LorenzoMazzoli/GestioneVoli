@@ -44,5 +44,10 @@ namespace Voli_Library
         {
             return this.cittaDiAppartenza.GetNome();
         }
+
+        public string GetInfo()
+        {
+            return $"Nome: {this.Nome} - Codice: {this.Codice} - Città di appartenenza: {this.GetNomeCitta()}";
+        }
     }
 }

@@ -24,7 +24,34 @@ namespace Voli
         {
             for (int i = 0; i < aeroporti.Count ; i++)
             {
-                lbCheckAeroporti.Items.Add("Nome: "+aeroporti[i].GetNome()+ "   Codice: "+aeroporti[i].GetCodice()+ "    Città: " + aeroporti[i].GetNomeCitta());
+                lbCheckAeroporti.Items.Add(aeroporti[i].GetInfo());
+            }
+        }
+
+        private void btnRemoveAeroporto_Click(object sender, EventArgs e)
+        {
+            if (lbCheckAeroporti.SelectedItem == null)
+            {
+                MessageBox.Show("Selezionare prima un aeroporto");
+            }
+            else
+            {
+                try
+                {
+                    Aeroporto a = aeroporti.First(a => lbCheckAeroporti.SelectedItem.ToString() == a.GetInfo());
+                    aeroporti.Remove(a);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                lbCheckAeroporti.Items.Clear();
+                foreach (Aeroporto aeroporto in aeroporti)
+                {
+                    lbCheckAeroporti.Items.Add(aeroporto.GetInfo());
+                }
             }
         }
     }
