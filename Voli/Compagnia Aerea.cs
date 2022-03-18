@@ -40,14 +40,13 @@ namespace Voli
             compagnia.AddVolo(new Volo("123", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[0], compagnia.GetAeroporti()[1]));
             compagnia.AddVolo(new Volo("456", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[1], compagnia.GetAeroporti()[2]));
             compagnia.AddVolo(new Volo("789", DateTime.Now.TimeOfDay, DateTime.Now.TimeOfDay, compagnia.GetAeroporti()[2], compagnia.GetAeroporti()[0]));
-            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[0], compagnia.GetPiloti()[1], compagnia.GetAssistenti()));
-            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[1], compagnia.GetPiloti()[2], compagnia.GetAssistenti()));
-            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[2], compagnia.GetPiloti()[0], compagnia.GetAssistenti()));
+            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[0], compagnia.GetPiloti()[1], compagnia.GetAssistenti(), compagnia.GetVoli()[0]));
+            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[1], compagnia.GetPiloti()[2], compagnia.GetAssistenti(), compagnia.GetVoli()[1]));
+            compagnia.AddViaggio(new Viaggio(DateTime.Now, compagnia.GetPiloti()[2], compagnia.GetPiloti()[0], compagnia.GetAssistenti(), compagnia.GetVoli()[2]));
         }
 
         private void btnModificaCompagnia_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
             frmComponenti formAggiungiComponenti = new frmComponenti(compagnia);
 
             formAggiungiComponenti.ShowDialog();

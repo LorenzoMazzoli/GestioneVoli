@@ -9,28 +9,36 @@ namespace Voli_Library
     public class Viaggio
     {
         DateTime dataPartenza;
-        string statoVolo;
 
         Pilota pilotaPrincipale;
         Pilota coPilota;
 
         List<Assistente> assistentiViaggio = new List<Assistente>();
+        Volo volo;
         public Viaggio()
         {
             dataPartenza = DateTime.MinValue;
-            statoVolo = "";
             pilotaPrincipale = null;
             coPilota = null;
             assistentiViaggio = new List<Assistente>();
+            volo = null;
         }
         public Viaggio(DateTime partenza, Pilota pilotaPrin, Pilota coPil, List<Assistente> assistenti)
         {
             dataPartenza = partenza;
-            statoVolo = "Previsto";
             pilotaPrincipale = pilotaPrin;
             coPilota = coPil;
             assistentiViaggio = assistenti;
         }
+        public Viaggio(DateTime partenza, Pilota pilotaPrin, Pilota coPil, List<Assistente> assistenti, Volo voloPassato)
+        {
+            dataPartenza = partenza;
+            pilotaPrincipale = pilotaPrin;
+            coPilota = coPil;
+            assistentiViaggio = assistenti;
+            volo = voloPassato;
+        }
+
 
         private List<Assistente> GetAssistenti()
         {
@@ -54,10 +62,9 @@ namespace Voli_Library
 
             return outString;
         }
-
         public string GetInfo()
         {
-            return $"Data di partenza: {this.dataPartenza} - stato del volo: {this.statoVolo} - Pilota: {this.pilotaPrincipale.GetNomeCognome()} - Co Pilota: {this.coPilota.GetNomeCognome()} - Assistenti: {this.GetNomiAssistenti()}";
+            return $"Data di partenza: {this.dataPartenza} - Pilota: {this.pilotaPrincipale.GetNomeCognome()} - Co Pilota: {this.coPilota.GetNomeCognome()} - Assistenti: {this.GetNomiAssistenti()} - Volo: {volo.GetInfo()}";
         }
     }
 }

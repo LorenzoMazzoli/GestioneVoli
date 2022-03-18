@@ -20,6 +20,7 @@ namespace Voli
         DateTime giornoViaggio;
         List<Assistente> assistentiPassati;
         List<Assistente> assistentiViaggio;
+        Volo volo;
         
         public frmAddViaggio(CompagniaAerea compagnia)
         {
@@ -40,33 +41,80 @@ namespace Voli
             {
                 clbSelectAssistenti.Items.Add(a.GetNomeCognome());
             }
+            foreach(Volo v in compagnia.GetVoli())
+            {
+                lbVoli.Items.Add(v.GetInfo());
+            }
+            
         }
 
         private void btnSalva_Click(object sender, EventArgs e)
         {
-            foreach (Pilota p in compagnia.GetPiloti())
+            if (cmbSelectCopilota.Text == cmbSelectPilota.Text)
             {
-                if (cmbSelectPilota.Text==p.GetNomeCognome())
-                {
-                    pilota = p;
-                }
-                if (cmbSelectCopilota.Text == p.GetNomeCognome())
-                {
-                    coPilota = p;
-                }
+                MessageBox.Show("Piloti selezionati non validi");
             }
-            giornoViaggio = dtpSelectGiorno.Value;
-            foreach (Assistente a in assistentiPassati)
+            if (cmbSelectPilota.SelectedItem == null || cmbSelectCopilota.SelectedItem == null || clbSelectAssistenti.SelectedItems==null || lbVoli.SelectedItem==null)
             {
-                foreach (string s in clbSelectAssistenti.CheckedItems)
+                MessageBox.Show("Inserire tutti i valori");
+            }
+            else
+            {
+                foreach (Pilota p in compagnia.GetPiloti())
                 {
-                    if (s == a.GetNomeCognome())
+                    if (cmbSelectPilota.Text == p.GetNomeCognome())
                     {
-                        assistentiViaggio.Add(a);
+                        pilota = p;
+                    }
+                    if (cmbSelectCopilota.Text == p.GetNomeCognome())
+                    {
+                        coPilota = p;
                     }
                 }
+                foreach (Assistente a in assistentiPassati)
+                {
+                    foreach (string s in clbSelectAssistenti.CheckedItems)
+                    {
+                        if (s == a.GetNomeCognome())
+                        {
+                            assistentiViaggio.Add(a);
+                        }
+                    }
+                }
+                foreach (Volo v in compagnia.GetVoli())
+                {
+                    foreach (string s in lbVoli.SelectedItems)
+                    {
+                        if (s == v.GetInfo())
+                        {
+                            volo = v;
+                        }
+                    }
+                }
+                foreach (Control c in Controls)
+                {
+                    if (c is ComboBox)
+                    {
+                        c.Text = "";
+                    }
+                    
+                }
+                dtpSelectGiorno.Value = DateTime.Now;
+                foreach (int i in clbSelectAssistenti.CheckedIndices)
+                {
+                    clbSelectAssistenti.SetItemCheckState(i, CheckState.Unchecked);
+                }
+                clbSelectAssistenti.ClearSelected();
+                lbVoli.ClearSelected();
             }
-           
+            if (dtpSelectGiorno.Value>DateTime.Now)
+            {
+                MessageBox.Show("data inserita non valida");
+            }
+            else
+            {
+                giornoViaggio = dtpSelectGiorno.Value;
+            }
         }
 
         private void btnChiudi_Click(object sender, EventArgs e)
@@ -92,6 +140,11 @@ namespace Voli
         public List<Assistente> GetAssistenti()
         {
             return assistentiViaggio;
+        }
+
+        public Volo GetVolo()
+        {
+            return volo;
         }
     }
 }

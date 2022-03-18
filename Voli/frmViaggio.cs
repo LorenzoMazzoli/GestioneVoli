@@ -35,7 +35,7 @@ namespace Voli
 
             FormAddViaggio.ShowDialog();
 
-            compagnia.AddViaggio(new Viaggio(FormAddViaggio.GetGiorno(), FormAddViaggio.GetPilota(), FormAddViaggio.GetCopilota(), FormAddViaggio.GetAssistenti()));
+            compagnia.AddViaggio(new Viaggio(FormAddViaggio.GetGiorno(), FormAddViaggio.GetPilota(), FormAddViaggio.GetCopilota(), FormAddViaggio.GetAssistenti(), FormAddViaggio.GetVolo()));
             
             radlcVoli.Items.Clear();
             foreach (Viaggio v in compagnia.GetViaggi())

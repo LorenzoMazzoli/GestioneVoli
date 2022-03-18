@@ -39,11 +39,13 @@ namespace Voli
             this.cmbSelectCopilota = new System.Windows.Forms.ComboBox();
             this.btnSalva = new System.Windows.Forms.Button();
             this.btnChiudi = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbVoli = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // dtpSelectGiorno
             // 
-            this.dtpSelectGiorno.Location = new System.Drawing.Point(538, 96);
+            this.dtpSelectGiorno.Location = new System.Drawing.Point(715, 89);
             this.dtpSelectGiorno.Name = "dtpSelectGiorno";
             this.dtpSelectGiorno.Size = new System.Drawing.Size(250, 27);
             this.dtpSelectGiorno.TabIndex = 0;
@@ -52,7 +54,7 @@ namespace Voli
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(550, 73);
+            this.label1.Location = new System.Drawing.Point(725, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 20);
             this.label1.TabIndex = 1;
@@ -80,7 +82,7 @@ namespace Voli
             // cmbSelectPilota
             // 
             this.cmbSelectPilota.FormattingEnabled = true;
-            this.cmbSelectPilota.Location = new System.Drawing.Point(15, 98);
+            this.cmbSelectPilota.Location = new System.Drawing.Point(190, 91);
             this.cmbSelectPilota.Name = "cmbSelectPilota";
             this.cmbSelectPilota.Size = new System.Drawing.Size(151, 28);
             this.cmbSelectPilota.TabIndex = 4;
@@ -89,7 +91,7 @@ namespace Voli
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(25, 75);
+            this.label3.Location = new System.Drawing.Point(200, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 20);
             this.label3.TabIndex = 5;
@@ -99,7 +101,7 @@ namespace Voli
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(260, 75);
+            this.label4.Location = new System.Drawing.Point(435, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 7;
@@ -108,7 +110,7 @@ namespace Voli
             // cmbSelectCopilota
             // 
             this.cmbSelectCopilota.FormattingEnabled = true;
-            this.cmbSelectCopilota.Location = new System.Drawing.Point(257, 98);
+            this.cmbSelectCopilota.Location = new System.Drawing.Point(432, 91);
             this.cmbSelectCopilota.Name = "cmbSelectCopilota";
             this.cmbSelectCopilota.Size = new System.Drawing.Size(151, 28);
             this.cmbSelectCopilota.TabIndex = 6;
@@ -116,7 +118,7 @@ namespace Voli
             // btnSalva
             // 
             this.btnSalva.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSalva.Location = new System.Drawing.Point(449, 321);
+            this.btnSalva.Location = new System.Drawing.Point(438, 406);
             this.btnSalva.Name = "btnSalva";
             this.btnSalva.Size = new System.Drawing.Size(107, 54);
             this.btnSalva.TabIndex = 8;
@@ -127,7 +129,7 @@ namespace Voli
             // btnChiudi
             // 
             this.btnChiudi.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnChiudi.Location = new System.Drawing.Point(587, 321);
+            this.btnChiudi.Location = new System.Drawing.Point(551, 406);
             this.btnChiudi.Name = "btnChiudi";
             this.btnChiudi.Size = new System.Drawing.Size(107, 54);
             this.btnChiudi.TabIndex = 9;
@@ -135,11 +137,32 @@ namespace Voli
             this.btnChiudi.UseVisualStyleBackColor = true;
             this.btnChiudi.Click += new System.EventHandler(this.btnChiudi_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(732, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Selezionare un volo";
+            // 
+            // lbVoli
+            // 
+            this.lbVoli.FormattingEnabled = true;
+            this.lbVoli.ItemHeight = 20;
+            this.lbVoli.Location = new System.Drawing.Point(401, 217);
+            this.lbVoli.Name = "lbVoli";
+            this.lbVoli.Size = new System.Drawing.Size(799, 144);
+            this.lbVoli.TabIndex = 10;
+            // 
             // frmAddViaggio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1212, 472);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbVoli);
             this.Controls.Add(this.btnChiudi);
             this.Controls.Add(this.btnSalva);
             this.Controls.Add(this.label4);
@@ -170,5 +193,7 @@ namespace Voli
         private System.Windows.Forms.ComboBox cmbSelectCopilota;
         private System.Windows.Forms.Button btnSalva;
         private System.Windows.Forms.Button btnChiudi;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox lbVoli;
     }
 }

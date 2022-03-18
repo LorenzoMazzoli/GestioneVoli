@@ -40,14 +40,14 @@ namespace Voli
             // 
             this.radlcVoli.Location = new System.Drawing.Point(219, 87);
             this.radlcVoli.Name = "radlcVoli";
-            this.radlcVoli.Size = new System.Drawing.Size(776, 401);
+            this.radlcVoli.Size = new System.Drawing.Size(1349, 401);
             this.radlcVoli.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(309, 24);
+            this.label1.Location = new System.Drawing.Point(484, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(395, 46);
             this.label1.TabIndex = 0;
@@ -79,7 +79,7 @@ namespace Voli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 500);
+            this.ClientSize = new System.Drawing.Size(1580, 500);
             this.Controls.Add(this.btnRemoveViaggio);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.label1);
