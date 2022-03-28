@@ -25,6 +25,7 @@ namespace Voli
         {
             btnRemoveAssistente.Visible = false;
             btnRemovePilota.Visible = false;
+            cmbTipoPersonale.Text = " Selezionare personale";
         }
 
         private void cmbTipoPersonale_SelectedIndexChanged(object sender, EventArgs e)

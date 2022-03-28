@@ -62,14 +62,14 @@ namespace Voli
             this.lbCheckVoli.ItemHeight = 20;
             this.lbCheckVoli.Location = new System.Drawing.Point(161, 91);
             this.lbCheckVoli.Name = "lbCheckVoli";
-            this.lbCheckVoli.Size = new System.Drawing.Size(744, 244);
+            this.lbCheckVoli.Size = new System.Drawing.Size(836, 244);
             this.lbCheckVoli.TabIndex = 2;
             // 
             // frmCheckVoli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 357);
+            this.ClientSize = new System.Drawing.Size(1010, 357);
             this.Controls.Add(this.lbCheckVoli);
             this.Controls.Add(this.btnRemoveVolo);
             this.Controls.Add(this.radlblVoli);

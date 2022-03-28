@@ -52,6 +52,10 @@ namespace Voli_Library
         {
             return this.aeroportoPartenza;
         }
+        public string GetNomeAeroportoPartenza()
+        {
+            return this.aeroportoPartenza.GetNome();
+        }
 
         public string GetInfo()
         {

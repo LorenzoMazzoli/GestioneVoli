@@ -107,7 +107,7 @@ namespace Voli
                 clbSelectAssistenti.ClearSelected();
                 lbVoli.ClearSelected();
             }
-            if (dtpSelectGiorno.Value>DateTime.Now)
+            if (dtpSelectGiorno.Value < DateTime.Now)
             {
                 MessageBox.Show("data inserita non valida");
             }

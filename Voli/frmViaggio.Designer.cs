@@ -29,19 +29,20 @@ namespace Voli
         /// </summary>
         private void InitializeComponent()
         {
-            this.radlcVoli = new Telerik.WinControls.UI.RadListControl();
+            this.radlcViaggi = new Telerik.WinControls.UI.RadListControl();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddViaggio = new System.Windows.Forms.Button();
             this.btnRemoveViaggio = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.radlcVoli)).BeginInit();
+            this.cmbAeroporti = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.radlcViaggi)).BeginInit();
             this.SuspendLayout();
             // 
-            // radlcVoli
+            // radlcViaggi
             // 
-            this.radlcVoli.Location = new System.Drawing.Point(219, 87);
-            this.radlcVoli.Name = "radlcVoli";
-            this.radlcVoli.Size = new System.Drawing.Size(1349, 401);
-            this.radlcVoli.TabIndex = 0;
+            this.radlcViaggi.Location = new System.Drawing.Point(219, 87);
+            this.radlcViaggi.Name = "radlcViaggi";
+            this.radlcViaggi.Size = new System.Drawing.Size(1349, 401);
+            this.radlcViaggi.TabIndex = 0;
             // 
             // label1
             // 
@@ -75,19 +76,29 @@ namespace Voli
             this.btnRemoveViaggio.UseVisualStyleBackColor = true;
             this.btnRemoveViaggio.Click += new System.EventHandler(this.btnRemoveViaggio_Click);
             // 
+            // cmbAeroporti
+            // 
+            this.cmbAeroporti.FormattingEnabled = true;
+            this.cmbAeroporti.Location = new System.Drawing.Point(12, 295);
+            this.cmbAeroporti.Name = "cmbAeroporti";
+            this.cmbAeroporti.Size = new System.Drawing.Size(201, 28);
+            this.cmbAeroporti.TabIndex = 2;
+            this.cmbAeroporti.SelectedIndexChanged += new System.EventHandler(this.cmbAeroporti_SelectedIndexChanged);
+            // 
             // frmViaggio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1580, 500);
+            this.Controls.Add(this.cmbAeroporti);
             this.Controls.Add(this.btnRemoveViaggio);
             this.Controls.Add(this.btnAddViaggio);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radlcVoli);
+            this.Controls.Add(this.radlcViaggi);
             this.Name = "frmViaggio";
             this.Text = "frmViaggio";
             this.Load += new System.EventHandler(this.frmViaggio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radlcVoli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radlcViaggi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,9 +106,10 @@ namespace Voli
 
         #endregion
 
-        private Telerik.WinControls.UI.RadListControl radlcVoli;
+        private Telerik.WinControls.UI.RadListControl radlcViaggi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddViaggio;
         private System.Windows.Forms.Button btnRemoveViaggio;
+        private System.Windows.Forms.ComboBox cmbAeroporti;
     }
 }

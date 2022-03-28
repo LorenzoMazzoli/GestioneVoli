@@ -25,7 +25,11 @@ namespace Voli
         {
             foreach (Viaggio v in compagnia.GetViaggi())
             {
-                radlcVoli.Items.Add(v.GetInfo());
+                radlcViaggi.Items.Add(v.GetInfo());
+            }
+            foreach  (Aeroporto a in compagnia.GetAeroporti())
+            {
+                cmbAeroporti.Items.Add(a.GetNome());
             }
         }
 
@@ -37,21 +41,16 @@ namespace Voli
 
             compagnia.AddViaggio(new Viaggio(FormAddViaggio.GetGiorno(), FormAddViaggio.GetPilota(), FormAddViaggio.GetCopilota(), FormAddViaggio.GetAssistenti(), FormAddViaggio.GetVolo()));
             
-            radlcVoli.Items.Clear();
+            radlcViaggi.Items.Clear();
             foreach (Viaggio v in compagnia.GetViaggi())
             {
-                radlcVoli.Items.Add(v.GetInfo());
+                radlcViaggi.Items.Add(v.GetInfo());
             }
-        }
-
-        private void btnaggiorna_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnRemoveViaggio_Click(object sender, EventArgs e)
         {
-            if (radlcVoli.SelectedItem==null)
+            if (radlcViaggi.SelectedItem==null)
             {
                 MessageBox.Show("Selezionare prima un viaggio");
             }
@@ -59,7 +58,7 @@ namespace Voli
             {
                 try
                 {
-                    Viaggio v = compagnia.GetViaggi().First(v => radlcVoli.SelectedItem.ToString() == v.GetInfo());
+                    Viaggio v = compagnia.GetViaggi().First(v => radlcViaggi.SelectedItem.ToString() == v.GetInfo());
                     compagnia.GetViaggi().Remove(v);
                 }
                 catch (Exception)
@@ -68,13 +67,25 @@ namespace Voli
                     throw;
                 }
 
-                radlcVoli.Items.Clear();
+                radlcViaggi.Items.Clear();
                 foreach (Viaggio v in compagnia.GetViaggi())
                 {
-                    radlcVoli.Items.Add(v.GetInfo());
+                    radlcViaggi.Items.Add(v.GetInfo());
                 }
             }
             
+        }
+
+        private void cmbAeroporti_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            radlcViaggi.Items.Clear();
+            foreach (Viaggio v in compagnia.GetViaggi())
+            {
+                if (cmbAeroporti.Text == v.GetVolo().GetNomeAeroportoPartenza())
+                {
+                    radlcViaggi.Items.Add(v.GetInfo());
+                }
+            }
         }
     }
 }

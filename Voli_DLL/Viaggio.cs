@@ -62,6 +62,10 @@ namespace Voli_Library
 
             return outString;
         }
+        public Volo GetVolo()
+        {
+            return this.volo;
+        }
         public string GetInfo()
         {
             return $"Data di partenza: {this.dataPartenza} - Pilota: {this.pilotaPrincipale.GetNomeCognome()} - Co Pilota: {this.coPilota.GetNomeCognome()} - Assistenti: {this.GetNomiAssistenti()} - Volo: {volo.GetInfo()}";

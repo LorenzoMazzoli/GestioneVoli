@@ -81,7 +81,7 @@ namespace Voli
             // btnRemovePilota
             // 
             this.btnRemovePilota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemovePilota.Location = new System.Drawing.Point(12, 166);
+            this.btnRemovePilota.Location = new System.Drawing.Point(12, 190);
             this.btnRemovePilota.Name = "btnRemovePilota";
             this.btnRemovePilota.Size = new System.Drawing.Size(182, 59);
             this.btnRemovePilota.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace Voli
             // btnRemoveAssistente
             // 
             this.btnRemoveAssistente.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemoveAssistente.Location = new System.Drawing.Point(12, 166);
+            this.btnRemoveAssistente.Location = new System.Drawing.Point(12, 190);
             this.btnRemoveAssistente.Name = "btnRemoveAssistente";
             this.btnRemoveAssistente.Size = new System.Drawing.Size(182, 59);
             this.btnRemoveAssistente.TabIndex = 5;
