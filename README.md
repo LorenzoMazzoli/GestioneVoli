@@ -20,3 +20,4 @@ prenotare un volo (non un membro della compagnia quindi, un vero e proprio clien
 
 
 Link GANTT:  https://docs.google.com/spreadsheets/d/13ekKmhwnwHjoIwZ3TDVGFs1YLiQD6IrY26azvkFaQew/edit?usp=sharing
+LINK PRESENTAZIONE: https://docs.google.com/presentation/d/15ClftQuLT-oM-8P0cvB9W9rCefxrrkBqv2gOMchRo3Q/edit#slide=id.p
